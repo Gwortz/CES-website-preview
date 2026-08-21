@@ -12,6 +12,10 @@ export type Review = {
   name: string;
   location: string;
   text: string;
+  /** Where the review was published. "sample" reviews are illustrative and clearly labeled in the UI. */
+  source?: "Google" | "rater8" | "sample";
+  /** Star rating as shown on the source platform. */
+  rating?: number;
 };
 
 export const sampleReviewNotice =

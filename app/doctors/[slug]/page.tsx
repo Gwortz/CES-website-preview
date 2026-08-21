@@ -12,6 +12,8 @@ import {
 import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
 import ImagePh from "@/components/ImagePh";
+import DoctorPhoto from "@/components/DoctorPhoto";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 import Ph, { PhText } from "@/components/Ph";
 
 export function generateStaticParams() {
@@ -77,16 +79,23 @@ export default async function DoctorPage({
               </div>
             </div>
             <div className="space-y-5 lg:sticky lg:top-24">
-              <ImagePh
-                variant="portrait"
-                label={`${doc.displayName} — professional portrait`}
+              <DoctorPhoto
+                photo={doc.photo}
+                name={doc.displayName}
                 className="aspect-[4/5]"
               />
-              <ImagePh
-                variant="video"
-                label={`Video introduction from ${doc.displayName} — placeholder player`}
-                className="aspect-video"
-              />
+              {doc.videoId ? (
+                <YouTubeEmbed
+                  videoId={doc.videoId}
+                  title={`Video introduction from ${doc.displayName}`}
+                />
+              ) : (
+                <ImagePh
+                  variant="video"
+                  label={`Video introduction from ${doc.displayName} — placeholder player`}
+                  className="aspect-video"
+                />
+              )}
             </div>
           </div>
         </div>

@@ -7,6 +7,7 @@ import { CTALink, Section, SectionHeading, Eyebrow } from "@/components/ui";
 import Reveal from "@/components/Reveal";
 import Ph from "@/components/Ph";
 import ImagePh from "@/components/ImagePh";
+import DoctorPhoto from "@/components/DoctorPhoto";
 import Stars from "@/components/Stars";
 
 export const metadata: Metadata = {
@@ -200,9 +201,15 @@ export default function HomePage() {
                     </span>
                   </p>
                   <p className="text-sm text-ink/60">{review.procedure}</p>
-                  <p className="mt-3 text-xs">
-                    <Ph>Sample review — replace with live Google reviews</Ph>
-                  </p>
+                  {review.source && review.source !== "sample" ? (
+                    <p className="mt-3 text-xs font-semibold text-ink/55">
+                      Source: {review.source} reviews
+                    </p>
+                  ) : (
+                    <p className="mt-3 text-xs">
+                      <Ph>Sample review — replace with live Google reviews</Ph>
+                    </p>
+                  )}
                 </figcaption>
               </figure>
             </Reveal>
@@ -247,9 +254,9 @@ export default function HomePage() {
                 href={`/doctors/${doc.slug}`}
                 className="group block rounded-3xl border border-pine-900/10 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-pine-900/10"
               >
-                <ImagePh
-                  variant="portrait"
-                  label={`${doc.displayName} — portrait`}
+                <DoctorPhoto
+                  photo={doc.photo}
+                  name={doc.displayName}
                   className="aspect-[4/4.5]"
                 />
                 <h3 className="mt-5 font-display text-xl font-semibold text-pine-950">

@@ -24,6 +24,10 @@ export type Doctor = {
   credentials: Credential[];
   innovation?: InnovationItem[];
   quote?: string;
+  /** Path under /public, e.g. "/images/doctors/lance-ferguson.jpg". Falls back to a placeholder when absent. */
+  photo?: string;
+  /** YouTube video ID for the doctor's video introduction, when available. */
+  videoId?: string;
 };
 
 export const doctors: Doctor[] = [

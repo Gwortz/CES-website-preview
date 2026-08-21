@@ -9,7 +9,7 @@ import {
 } from "@/components/ui";
 import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
-import ImagePh from "@/components/ImagePh";
+import DoctorPhoto from "@/components/DoctorPhoto";
 import Ph from "@/components/Ph";
 
 export const metadata: Metadata = {
@@ -23,12 +23,14 @@ function DoctorCard({
   name,
   focus,
   role,
+  photo,
   delay,
 }: {
   slug: string;
   name: string;
   focus: string;
   role: string;
+  photo?: string;
   delay: number;
 }) {
   return (
@@ -37,11 +39,7 @@ function DoctorCard({
         href={`/doctors/${slug}`}
         className="group block h-full rounded-3xl border border-pine-900/10 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-pine-900/10"
       >
-        <ImagePh
-          variant="portrait"
-          label={`${name} — portrait`}
-          className="aspect-[4/4.5]"
-        />
+        <DoctorPhoto photo={photo} name={name} className="aspect-[4/4.5]" />
         <p className="mt-5 text-xs font-bold uppercase tracking-[0.18em] text-copper-700">
           {role}
         </p>
@@ -102,6 +100,7 @@ export default function DoctorsPage() {
               name={doc.name}
               focus={doc.focus}
               role={doc.role}
+              photo={doc.photo}
               delay={i * 90}
             />
           ))}
@@ -124,6 +123,7 @@ export default function DoctorsPage() {
               name={doc.name}
               focus={doc.focus}
               role={doc.role}
+              photo={doc.photo}
               delay={i * 90}
             />
           ))}
