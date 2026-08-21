@@ -47,25 +47,25 @@ export default function LensOptionsHub() {
             <Reveal key={lens.slug} delay={i * 70}>
               <Link
                 href={`/cataracts/lens-options/${lens.slug}`}
-                className="group flex h-full flex-col rounded-3xl border border-pine-900/10 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-pine-900/10"
+                className="group flex h-full flex-col rounded-3xl border border-brand-900/10 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-900/10"
               >
                 <div className="flex flex-wrap items-center gap-2">
-                  <h2 className="font-display text-xl font-semibold text-pine-950">
+                  <h2 className="font-display text-xl font-semibold text-brand-950">
                     {lens.shortName}
                   </h2>
                   {lens.brand && (
-                    <span className="rounded-full bg-pine-50 px-3 py-0.5 text-xs font-semibold text-pine-800">
+                    <span className="rounded-full bg-brand-50 px-3 py-0.5 text-xs font-semibold text-brand-800">
                       {lens.brand}
                     </span>
                   )}
                 </div>
-                <p className="mt-1 text-sm font-semibold text-copper-700">
+                <p className="mt-1 text-sm font-semibold text-accent-700">
                   {lens.tag}
                 </p>
                 <p className="mt-3 flex-1 leading-relaxed text-ink/75">
                   {lens.summary}
                 </p>
-                <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-copper-700 group-hover:text-copper-800">
+                <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-accent-700 group-hover:text-accent-800">
                   Full details and tradeoffs
                   <span
                     aria-hidden="true"
@@ -78,12 +78,12 @@ export default function LensOptionsHub() {
             </Reveal>
           ))}
           <Reveal delay={lenses.length * 70}>
-            <div className="flex h-full flex-col justify-between rounded-3xl bg-pine-950 p-7">
+            <div className="flex h-full flex-col justify-between rounded-3xl bg-brand-950 p-7">
               <div className="on-dark">
                 <h2 className="font-display text-xl font-semibold text-cream">
                   Under 60, no cataract yet?
                 </h2>
-                <p className="mt-3 leading-relaxed text-pine-100/85">
+                <p className="mt-3 leading-relaxed text-brand-100/85">
                   These same lenses power Refractive Lens Exchange, the
                   procedure that ends the reader shuffle before a cataract ever
                   forms.
@@ -121,10 +121,10 @@ export default function LensOptionsHub() {
             <div
               role="img"
               aria-label="Placeholder frame for the Preview My Vision interactive lens simulator"
-              className="overflow-hidden rounded-3xl border border-cream/15 bg-pine-900 shadow-2xl"
+              className="overflow-hidden rounded-3xl border border-cream/15 bg-brand-900 shadow-2xl"
             >
-              <div className="flex items-center gap-2 border-b border-cream/10 bg-pine-950/80 px-4 py-3">
-                <span aria-hidden="true" className="h-3 w-3 rounded-full bg-copper-500/70" />
+              <div className="flex items-center gap-2 border-b border-cream/10 bg-brand-950/80 px-4 py-3">
+                <span aria-hidden="true" className="h-3 w-3 rounded-full bg-accent-500/70" />
                 <span aria-hidden="true" className="h-3 w-3 rounded-full bg-cream/30" />
                 <span aria-hidden="true" className="h-3 w-3 rounded-full bg-cream/30" />
                 <p className="ml-3 text-xs font-semibold uppercase tracking-wider text-cream/60">
@@ -132,7 +132,7 @@ export default function LensOptionsHub() {
                 </p>
               </div>
               <div className="grid gap-4 p-6 sm:grid-cols-[1fr_auto] sm:items-center">
-                <div className="flex aspect-[16/8] items-center justify-center rounded-2xl bg-gradient-to-br from-pine-800 via-pine-900 to-pine-950">
+                <div className="flex aspect-[16/8] items-center justify-center rounded-2xl bg-gradient-to-br from-brand-800 via-brand-900 to-brand-950">
                   <div className="text-center">
                     <svg
                       viewBox="0 0 24 24"
@@ -176,15 +176,15 @@ export default function LensOptionsHub() {
           />
         </Reveal>
         <Reveal className="mt-10">
-          <div className="overflow-x-auto rounded-3xl border border-pine-900/10 bg-white shadow-sm">
+          <div className="overflow-x-auto rounded-3xl border border-brand-900/10 bg-white shadow-sm">
             <table className="w-full min-w-[860px] border-collapse text-left text-sm">
               <caption className="sr-only">
                 Comparison of intraocular lens options across vision range,
                 astigmatism correction, night driving, and glasses independence
               </caption>
               <thead>
-                <tr className="border-b border-pine-900/10 bg-pine-50">
-                  <th scope="col" className="px-5 py-4 font-semibold text-pine-950">
+                <tr className="border-b border-brand-900/10 bg-brand-50">
+                  <th scope="col" className="px-5 py-4 font-semibold text-brand-950">
                     &nbsp;
                   </th>
                   {lenses.map((lens) => (
@@ -195,7 +195,7 @@ export default function LensOptionsHub() {
                     >
                       <Link
                         href={`/cataracts/lens-options/${lens.slug}`}
-                        className="font-display text-base font-semibold text-pine-950 hover:text-copper-700"
+                        className="font-display text-base font-semibold text-brand-950 hover:text-accent-700"
                       >
                         {lens.shortName}
                       </Link>
@@ -218,7 +218,7 @@ export default function LensOptionsHub() {
                   >
                     <th
                       scope="row"
-                      className="whitespace-nowrap px-5 py-4 align-top font-semibold text-pine-950"
+                      className="whitespace-nowrap px-5 py-4 align-top font-semibold text-brand-950"
                     >
                       {row.label}
                     </th>
@@ -232,10 +232,10 @@ export default function LensOptionsHub() {
                     ))}
                   </tr>
                 ))}
-                <tr className="border-t border-pine-900/10 bg-pine-50/60">
+                <tr className="border-t border-brand-900/10 bg-brand-50/60">
                   <th
                     scope="row"
-                    className="whitespace-nowrap px-5 py-4 align-top font-semibold text-pine-950"
+                    className="whitespace-nowrap px-5 py-4 align-top font-semibold text-brand-950"
                   >
                     Cost note
                   </th>

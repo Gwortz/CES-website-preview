@@ -21,7 +21,7 @@ export default function AccessibilityPage() {
         <Reveal>
           <div className="max-w-3xl space-y-8">
             <div>
-              <h2 className="font-display text-2xl font-semibold text-pine-950">
+              <h2 className="font-display text-2xl font-semibold text-brand-950">
                 Our commitment
               </h2>
               <p className="mt-3 leading-relaxed text-ink/80">
@@ -31,7 +31,7 @@ export default function AccessibilityPage() {
               </p>
             </div>
             <div>
-              <h2 className="font-display text-2xl font-semibold text-pine-950">
+              <h2 className="font-display text-2xl font-semibold text-brand-950">
                 What we've built in
               </h2>
               <div className="mt-4">
@@ -50,7 +50,7 @@ export default function AccessibilityPage() {
               </div>
             </div>
             <div>
-              <h2 className="font-display text-2xl font-semibold text-pine-950">
+              <h2 className="font-display text-2xl font-semibold text-brand-950">
                 Found a barrier?
               </h2>
               <p className="mt-3 leading-relaxed text-ink/80">
@@ -64,7 +64,7 @@ export default function AccessibilityPage() {
                     {loc.name}:{" "}
                     <a
                       href={loc.phoneHref}
-                      className="font-semibold text-pine-800 underline decoration-pine-300 underline-offset-2 hover:text-pine-950"
+                      className="font-semibold text-brand-800 underline decoration-brand-300 underline-offset-2 hover:text-brand-950"
                     >
                       {loc.phone}
                     </a>

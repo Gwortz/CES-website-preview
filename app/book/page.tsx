@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 
 export default function BookPage() {
   return (
-    <div className="bg-gradient-to-b from-pine-50 to-cream">
+    <div className="bg-gradient-to-b from-brand-50 to-cream">
       <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
         <div className="text-center">
           <Eyebrow>Book a consultation</Eyebrow>
-          <h1 className="mt-3 font-display text-3xl font-semibold tracking-tight text-pine-950 sm:text-4xl">
+          <h1 className="mt-3 font-display text-3xl font-semibold tracking-tight text-brand-950 sm:text-4xl">
             Two minutes now. Clearer decades later.
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-ink/75">

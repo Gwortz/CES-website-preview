@@ -16,7 +16,7 @@ export default function BookingChooser() {
   return (
     <div>
       <fieldset>
-        <legend className="font-display text-2xl font-semibold text-pine-950">
+        <legend className="font-display text-2xl font-semibold text-brand-950">
           1. Choose your location
         </legend>
         <div className="mt-5 grid gap-4 sm:grid-cols-2">
@@ -27,8 +27,8 @@ export default function BookingChooser() {
                 key={loc.slug}
                 className={`relative flex cursor-pointer flex-col rounded-3xl border-2 p-6 transition-colors ${
                   isSelected
-                    ? "border-pine-800 bg-pine-50"
-                    : "border-pine-900/15 bg-white hover:border-pine-800/50"
+                    ? "border-brand-800 bg-brand-50"
+                    : "border-brand-900/15 bg-white hover:border-brand-800/50"
                 }`}
               >
                 <input
@@ -40,12 +40,12 @@ export default function BookingChooser() {
                   className="sr-only"
                 />
                 <span className="flex items-center justify-between">
-                  <span className="font-display text-xl font-semibold text-pine-950">
+                  <span className="font-display text-xl font-semibold text-brand-950">
                     {loc.name}
                   </span>
                   <span className="flex items-center gap-2">
                     {loc.badge && (
-                      <span className="rounded-full bg-copper-600 px-2.5 py-0.5 text-[0.65rem] font-bold uppercase tracking-wider text-white">
+                      <span className="rounded-full bg-accent-600 px-2.5 py-0.5 text-[0.65rem] font-bold uppercase tracking-wider text-white">
                         {loc.badge}
                       </span>
                     )}
@@ -53,8 +53,8 @@ export default function BookingChooser() {
                       aria-hidden="true"
                       className={`flex h-5 w-5 items-center justify-center rounded-full border-2 ${
                         isSelected
-                          ? "border-pine-800 bg-pine-800"
-                          : "border-pine-900/30 bg-white"
+                          ? "border-brand-800 bg-brand-800"
+                          : "border-brand-900/30 bg-white"
                       }`}
                     >
                       {isSelected && (
@@ -76,7 +76,7 @@ export default function BookingChooser() {
                 <span className="mt-2 text-sm leading-relaxed text-ink/70">
                   {loc.address1}, {loc.cityStateZip}
                 </span>
-                <span className="mt-1 text-sm font-semibold text-pine-800">
+                <span className="mt-1 text-sm font-semibold text-brand-800">
                   {loc.phone}
                 </span>
               </label>
@@ -86,18 +86,18 @@ export default function BookingChooser() {
       </fieldset>
 
       <div className="mt-10">
-        <h2 className="font-display text-2xl font-semibold text-pine-950">
+        <h2 className="font-display text-2xl font-semibold text-brand-950">
           2. Pick a time
         </h2>
         <div
           role="img"
           aria-label="Placeholder frame where the Klara online scheduling widget embeds"
-          className="mt-5 overflow-hidden rounded-3xl border border-pine-900/10 bg-white shadow-sm"
+          className="mt-5 overflow-hidden rounded-3xl border border-brand-900/10 bg-white shadow-sm"
         >
-          <div className="flex items-center gap-2 border-b border-pine-900/10 bg-pine-50 px-4 py-3">
-            <span aria-hidden="true" className="h-3 w-3 rounded-full bg-copper-400" />
-            <span aria-hidden="true" className="h-3 w-3 rounded-full bg-pine-200" />
-            <span aria-hidden="true" className="h-3 w-3 rounded-full bg-pine-200" />
+          <div className="flex items-center gap-2 border-b border-brand-900/10 bg-brand-50 px-4 py-3">
+            <span aria-hidden="true" className="h-3 w-3 rounded-full bg-accent-400" />
+            <span aria-hidden="true" className="h-3 w-3 rounded-full bg-brand-200" />
+            <span aria-hidden="true" className="h-3 w-3 rounded-full bg-brand-200" />
             <p className="ml-3 text-xs font-semibold uppercase tracking-wider text-ink/50">
               Online scheduling module
             </p>
@@ -105,7 +105,7 @@ export default function BookingChooser() {
           <div className="flex min-h-64 flex-col items-center justify-center gap-4 p-10 text-center">
             <svg
               viewBox="0 0 24 24"
-              className="h-12 w-12 text-pine-300"
+              className="h-12 w-12 text-brand-300"
               fill="none"
               stroke="currentColor"
               strokeWidth="1.5"
@@ -132,13 +132,13 @@ export default function BookingChooser() {
         </div>
       </div>
 
-      <div className="mt-10 rounded-3xl bg-pine-950 p-7 sm:p-8">
+      <div className="mt-10 rounded-3xl bg-brand-950 p-7 sm:p-8">
         <div className="on-dark flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-center">
           <div>
             <h2 className="font-display text-xl font-semibold text-cream">
               Rather talk to a person?
             </h2>
-            <p className="mt-1 text-pine-100/85">
+            <p className="mt-1 text-brand-100/85">
               A real human answers during office hours.
             </p>
           </div>

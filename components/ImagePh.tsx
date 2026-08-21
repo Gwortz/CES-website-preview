@@ -6,18 +6,18 @@
 type Variant = "photo" | "portrait" | "video" | "map" | "badge";
 
 const variantStyles: Record<Variant, string> = {
-  photo: "bg-gradient-to-br from-pine-200 via-pine-100 to-copper-100",
-  portrait: "bg-gradient-to-b from-pine-100 via-sand to-copper-100",
-  video: "bg-gradient-to-br from-pine-900 via-pine-800 to-pine-950",
-  map: "bg-gradient-to-br from-pine-50 via-sand to-pine-100",
-  badge: "bg-gradient-to-br from-copper-100 via-sand to-copper-200",
+  photo: "bg-gradient-to-br from-brand-200 via-brand-100 to-accent-100",
+  portrait: "bg-gradient-to-b from-brand-100 via-sand to-accent-100",
+  video: "bg-gradient-to-br from-brand-900 via-brand-800 to-brand-950",
+  map: "bg-gradient-to-br from-brand-50 via-sand to-brand-100",
+  badge: "bg-gradient-to-br from-accent-100 via-sand to-accent-200",
 };
 
 function VariantIcon({ variant }: { variant: Variant }) {
   const cls =
     variant === "video"
       ? "h-12 w-12 text-cream/90"
-      : "h-10 w-10 text-pine-700/50";
+      : "h-10 w-10 text-brand-700/50";
   switch (variant) {
     case "video":
       return (
@@ -74,7 +74,7 @@ export default function ImagePh({
     <div
       role="img"
       aria-label={`Placeholder image: ${label}`}
-      className={`relative flex w-full flex-col items-center justify-center gap-3 overflow-hidden border border-pine-900/10 ${rounded} ${variantStyles[variant]} ${className}`}
+      className={`relative flex w-full flex-col items-center justify-center gap-3 overflow-hidden border border-brand-900/10 ${rounded} ${variantStyles[variant]} ${className}`}
     >
       <div
         aria-hidden="true"
@@ -82,12 +82,12 @@ export default function ImagePh({
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-12 -left-8 h-44 w-44 rounded-full bg-copper-300/25 blur-3xl"
+        className="pointer-events-none absolute -bottom-12 -left-8 h-44 w-44 rounded-full bg-accent-300/25 blur-3xl"
       />
       <VariantIcon variant={variant} />
       <p
         className={`relative z-10 max-w-[85%] text-center text-xs font-semibold uppercase tracking-wider ${
-          variant === "video" ? "text-cream/80" : "text-pine-800/60"
+          variant === "video" ? "text-cream/80" : "text-brand-800/60"
         }`}
       >
         {label}

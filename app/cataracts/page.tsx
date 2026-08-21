@@ -109,14 +109,14 @@ export default function CataractsPage() {
         <ol className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {steps.map((step, i) => (
             <Reveal key={step.title} delay={i * 60} as="li">
-              <div className="h-full rounded-3xl border border-pine-900/10 bg-cream p-6">
+              <div className="h-full rounded-3xl border border-brand-900/10 bg-cream p-6">
                 <span
                   aria-hidden="true"
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-pine-950 font-display text-lg font-semibold text-cream"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-950 font-display text-lg font-semibold text-cream"
                 >
                   {i + 1}
                 </span>
-                <h3 className="mt-4 font-display text-xl font-semibold text-pine-950">
+                <h3 className="mt-4 font-display text-xl font-semibold text-brand-950">
                   {step.title}
                 </h3>
                 <p className="mt-2 leading-relaxed text-ink/75">{step.body}</p>
@@ -124,12 +124,12 @@ export default function CataractsPage() {
             </Reveal>
           ))}
           <Reveal delay={steps.length * 60} as="li">
-            <div className="flex h-full flex-col justify-between rounded-3xl bg-pine-950 p-6">
+            <div className="flex h-full flex-col justify-between rounded-3xl bg-brand-950 p-6">
               <div className="on-dark">
                 <h3 className="font-display text-xl font-semibold text-cream">
                   The one-time choice
                 </h3>
-                <p className="mt-2 leading-relaxed text-pine-100/85">
+                <p className="mt-2 leading-relaxed text-brand-100/85">
                   Since your lens is being replaced anyway, you choose what
                   replaces it. That choice shapes how you see for the rest of
                   your life.
@@ -182,7 +182,7 @@ export default function CataractsPage() {
                 className="aspect-[4/3]"
               />
               <Card>
-                <h3 className="font-display text-xl font-semibold text-pine-950">
+                <h3 className="font-display text-xl font-semibold text-brand-950">
                   Also part of cataract care here
                 </h3>
                 <div className="mt-4">
@@ -212,7 +212,7 @@ export default function CataractsPage() {
 
       <Section tone="sand" id="yag">
         <Reveal>
-          <div className="rounded-3xl border border-pine-900/10 bg-white p-8 sm:p-10">
+          <div className="rounded-3xl border border-brand-900/10 bg-white p-8 sm:p-10">
             <SectionHeading
               eyebrow="Years later"
               title="If vision clouds again: the YAG laser."
@@ -237,7 +237,7 @@ export default function CataractsPage() {
           <div className="mt-6">
             <Link
               href="/cataracts/refractive-lens-exchange"
-              className="inline-flex items-center gap-2 font-semibold text-copper-700 hover:text-copper-800"
+              className="inline-flex items-center gap-2 font-semibold text-accent-700 hover:text-accent-800"
             >
               Read about Refractive Lens Exchange
               <span aria-hidden="true">&rarr;</span>

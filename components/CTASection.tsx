@@ -19,7 +19,7 @@ export default function CTASection({
   secondaryHref?: string;
 }) {
   return (
-    <section className="on-dark bg-pine-950">
+    <section className="on-dark bg-brand-950">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-center">
           <SectionHeading dark eyebrow={eyebrow} title={title} lede={lede} />
@@ -34,7 +34,7 @@ export default function CTASection({
                 </CTALink>
               )}
             </div>
-            <div className="text-sm text-pine-200/80">
+            <div className="text-sm text-brand-200/80">
               {locations.map((loc) => (
                 <p key={loc.slug}>
                   {loc.name}:{" "}

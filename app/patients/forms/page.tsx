@@ -43,10 +43,10 @@ export default function FormsPage() {
             {forms.map((form) => (
               <li
                 key={form.name}
-                className="flex items-start justify-between gap-4 rounded-2xl border border-pine-900/10 bg-white p-6"
+                className="flex items-start justify-between gap-4 rounded-2xl border border-brand-900/10 bg-white p-6"
               >
                 <div>
-                  <h2 className="font-semibold text-pine-950">{form.name}</h2>
+                  <h2 className="font-semibold text-brand-950">{form.name}</h2>
                   <p className="mt-1 text-sm text-ink/65">{form.note}</p>
                 </div>
                 <span className="shrink-0 text-sm">

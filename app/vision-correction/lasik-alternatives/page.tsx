@@ -71,20 +71,20 @@ export default function LasikAlternativesPage() {
             <Reveal key={route.answer + i} delay={i * 60}>
               <Link
                 href={route.href}
-                className="group grid gap-4 rounded-3xl border border-pine-900/10 bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md sm:grid-cols-[1fr_auto] sm:items-center sm:p-8"
+                className="group grid gap-4 rounded-3xl border border-brand-900/10 bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md sm:grid-cols-[1fr_auto] sm:items-center sm:p-8"
               >
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-wider text-ink/50">
                     If the reason was
                   </p>
-                  <h2 className="mt-1 font-display text-xl font-semibold text-pine-950 sm:text-2xl">
+                  <h2 className="mt-1 font-display text-xl font-semibold text-brand-950 sm:text-2xl">
                     {route.reason}
                   </h2>
                   <p className="mt-3 max-w-2xl leading-relaxed text-ink/75">
                     {route.body}
                   </p>
                 </div>
-                <span className="inline-flex items-center gap-2 justify-self-start rounded-full bg-pine-950 px-5 py-2.5 font-semibold text-cream transition-colors group-hover:bg-pine-800 sm:justify-self-end">
+                <span className="inline-flex items-center gap-2 justify-self-start rounded-full bg-brand-950 px-5 py-2.5 font-semibold text-cream transition-colors group-hover:bg-brand-800 sm:justify-self-end">
                   {route.answer}
                   <span
                     aria-hidden="true"
@@ -107,8 +107,8 @@ export default function LasikAlternativesPage() {
               title="A candidacy exam should never be a sales funnel."
               lede="Some practices treat every walk-in as a LASIK sale. We treat every walk-in as a set of measurements with one right answer. Sometimes that answer is a different procedure. Sometimes it is wait. Our surgeons put their names on outcomes, not volume."
             />
-            <div className="rounded-3xl bg-pine-50 p-8">
-              <h3 className="font-display text-xl font-semibold text-pine-950">
+            <div className="rounded-3xl bg-brand-50 p-8">
+              <h3 className="font-display text-xl font-semibold text-brand-950">
                 What your consultation covers
               </h3>
               <div className="mt-4">

@@ -55,14 +55,14 @@ export default function HomePage() {
   return (
     <>
       {/* ---------------- Hero ---------------- */}
-      <section className="on-dark relative overflow-hidden bg-pine-950">
+      <section className="on-dark relative overflow-hidden bg-brand-950">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
         >
-          <div className="absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-pine-700/40 blur-3xl" />
-          <div className="absolute -right-24 -top-24 h-[28rem] w-[28rem] rounded-full bg-copper-600/25 blur-3xl" />
-          <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-pine-500/20 blur-3xl" />
+          <div className="absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-brand-700/40 blur-3xl" />
+          <div className="absolute -right-24 -top-24 h-[28rem] w-[28rem] rounded-full bg-accent-600/25 blur-3xl" />
+          <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-brand-500/20 blur-3xl" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24 lg:px-8">
           <span className="inline-flex items-center gap-2 rounded-full border border-cream/20 bg-cream/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-cream/80">
@@ -76,7 +76,7 @@ export default function HomePage() {
             <br />
             the Doctors Choose.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-pine-100/85 sm:text-xl">
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-brand-100/85 sm:text-xl">
             {site.secondaryTagline} Premier surgical eye care in the Bluegrass,
             from Kentucky&rsquo;s first optometric co-management surgical
             center. Now in Lexington and Louisville.
@@ -95,7 +95,7 @@ export default function HomePage() {
       {/* ---------------- Authority stat bar ---------------- */}
       <section
         aria-label="Practice milestones"
-        className="border-b border-pine-900/10 bg-sand"
+        className="border-b border-brand-900/10 bg-sand"
       >
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
           <dl className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-5">
@@ -104,7 +104,7 @@ export default function HomePage() {
                 <dt className="order-2 mt-2 text-sm leading-snug text-ink/70">
                   {stat.label}
                 </dt>
-                <dd className="order-1 font-display text-lg font-semibold leading-tight text-pine-950 sm:text-xl">
+                <dd className="order-1 font-display text-lg font-semibold leading-tight text-brand-950 sm:text-xl">
                   {stat.placeholder ? <Ph>{stat.value}</Ph> : stat.value}
                 </dd>
               </div>
@@ -127,12 +127,12 @@ export default function HomePage() {
             <Reveal key={path.href} delay={i * 90}>
               <Link
                 href={path.href}
-                className="group flex h-full flex-col rounded-3xl border border-pine-900/10 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-pine-900/10"
+                className="group flex h-full flex-col rounded-3xl border border-brand-900/10 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-900/10"
               >
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-copper-700">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent-700">
                   {path.age}
                 </p>
-                <h3 className="mt-3 font-display text-2xl font-semibold text-pine-950">
+                <h3 className="mt-3 font-display text-2xl font-semibold text-brand-950">
                   {path.title}
                 </h3>
                 <p className="mt-3 flex-1 leading-relaxed text-ink/75">
@@ -142,13 +142,13 @@ export default function HomePage() {
                   {path.procedures.map((proc) => (
                     <li
                       key={proc}
-                      className="rounded-full bg-pine-50 px-3 py-1 text-xs font-semibold text-pine-800"
+                      className="rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-800"
                     >
                       {proc}
                     </li>
                   ))}
                 </ul>
-                <span className="mt-6 inline-flex items-center gap-2 font-semibold text-copper-700 group-hover:text-copper-800">
+                <span className="mt-6 inline-flex items-center gap-2 font-semibold text-accent-700 group-hover:text-accent-800">
                   {path.cta}
                   <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
                     &rarr;
@@ -159,9 +159,9 @@ export default function HomePage() {
           ))}
         </div>
         <Reveal className="mt-10">
-          <div className="flex flex-col items-start gap-4 rounded-3xl bg-pine-50 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+          <div className="flex flex-col items-start gap-4 rounded-3xl bg-brand-50 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
             <div>
-              <h3 className="font-display text-xl font-semibold text-pine-950">
+              <h3 className="font-display text-xl font-semibold text-brand-950">
                 Not sure where you fit?
               </h3>
               <p className="mt-1 text-ink/70">
@@ -184,10 +184,10 @@ export default function HomePage() {
               title="Word travels fast in the Bluegrass."
               lede="Our best marketing has always been the person across the dinner table who can suddenly read the menu."
             />
-            <div className="flex items-center gap-3 rounded-2xl border border-pine-900/10 bg-cream px-5 py-4">
+            <div className="flex items-center gap-3 rounded-2xl border border-brand-900/10 bg-cream px-5 py-4">
               <Stars label="4.8 out of 5 stars" />
               <div className="text-sm leading-snug">
-                <p className="font-bold text-pine-950">
+                <p className="font-bold text-brand-950">
                   4.8 stars · 865+ Google reviews
                 </p>
                 <p className="text-ink/65">
@@ -200,13 +200,13 @@ export default function HomePage() {
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {reviews.slice(0, 3).map((review, i) => (
             <Reveal key={review.id} delay={i * 90}>
-              <figure className="flex h-full flex-col rounded-3xl border border-pine-900/10 bg-cream p-7">
+              <figure className="flex h-full flex-col rounded-3xl border border-brand-900/10 bg-cream p-7">
                 <Stars className="h-4 w-4" />
                 <blockquote className="mt-4 flex-1 leading-relaxed text-ink/85">
                   &ldquo;{review.text}&rdquo;
                 </blockquote>
                 <figcaption className="mt-5">
-                  <p className="font-semibold text-pine-950">
+                  <p className="font-semibold text-brand-950">
                     {review.name}{" "}
                     <span className="font-normal text-ink/60">
                       · {review.location}
@@ -229,7 +229,7 @@ export default function HomePage() {
         </div>
         <Reveal className="mt-14">
           <div className="flex items-end justify-between gap-4">
-            <h3 className="font-display text-2xl font-semibold text-pine-950">
+            <h3 className="font-display text-2xl font-semibold text-brand-950">
               Hear it in their own words
             </h3>
             <CTALink href="/reviews" variant="link">
@@ -264,20 +264,20 @@ export default function HomePage() {
             <Reveal key={doc.slug} delay={i * 90}>
               <Link
                 href={`/doctors/${doc.slug}`}
-                className="group block rounded-3xl border border-pine-900/10 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-pine-900/10"
+                className="group block rounded-3xl border border-brand-900/10 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-900/10"
               >
                 <DoctorPhoto
                   photo={doc.photo}
                   name={doc.displayName}
                   className="aspect-[4/4.5]"
                 />
-                <h3 className="mt-5 font-display text-xl font-semibold text-pine-950">
+                <h3 className="mt-5 font-display text-xl font-semibold text-brand-950">
                   {doc.name}
                 </h3>
                 <p className="mt-1 text-sm leading-snug text-ink/70">
                   {doc.focus}
                 </p>
-                <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-copper-700 group-hover:text-copper-800">
+                <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-accent-700 group-hover:text-accent-800">
                   Read bio
                   <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
                     &rarr;
@@ -306,7 +306,7 @@ export default function HomePage() {
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {locations.map((loc, i) => (
             <Reveal key={loc.slug} delay={i * 90}>
-              <div className="overflow-hidden rounded-3xl border border-pine-900/10 bg-white shadow-sm">
+              <div className="overflow-hidden rounded-3xl border border-brand-900/10 bg-white shadow-sm">
                 <div className="relative">
                   <ImagePh
                     variant="map"
@@ -315,13 +315,13 @@ export default function HomePage() {
                     rounded="rounded-none"
                   />
                   {loc.badge && (
-                    <span className="absolute left-4 top-4 rounded-full bg-copper-600 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-white shadow">
+                    <span className="absolute left-4 top-4 rounded-full bg-accent-600 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-white shadow">
                       {loc.badge}
                     </span>
                   )}
                 </div>
                 <div className="p-7">
-                  <h3 className="font-display text-2xl font-semibold text-pine-950">
+                  <h3 className="font-display text-2xl font-semibold text-brand-950">
                     {loc.name}
                   </h3>
                   <p className="mt-2 leading-relaxed text-ink/75">
@@ -332,7 +332,7 @@ export default function HomePage() {
                   <p className="mt-2 text-ink/75">
                     <a
                       href={loc.phoneHref}
-                      className="font-semibold text-pine-800 underline decoration-pine-300 underline-offset-2 hover:text-pine-950"
+                      className="font-semibold text-brand-800 underline decoration-brand-300 underline-offset-2 hover:text-brand-950"
                     >
                       {loc.phone}
                     </a>
@@ -372,7 +372,7 @@ export default function HomePage() {
               We co-founded Eye Surgery Today so patients could get straight
               answers.
             </h2>
-            <p className="mt-4 text-lg leading-relaxed text-pine-100/85">
+            <p className="mt-4 text-lg leading-relaxed text-brand-100/85">
               Modern eye surgery moves fast, and most of what patients find
               online is either marketing or jargon. Eye Surgery Today is the
               education platform our surgeons helped build to fix that: plain
@@ -403,12 +403,12 @@ export default function HomePage() {
       {/* ---------------- Final CTA ---------------- */}
       <Section tone="cream">
         <Reveal>
-          <div className="rounded-3xl bg-gradient-to-br from-pine-900 to-pine-950 p-8 sm:p-14">
+          <div className="rounded-3xl bg-gradient-to-br from-brand-900 to-brand-950 p-8 sm:p-14">
             <div className="on-dark max-w-2xl">
               <h2 className="font-display text-3xl font-semibold text-cream sm:text-4xl">
                 Better living through better vision.
               </h2>
-              <p className="mt-4 text-lg leading-relaxed text-pine-100/85">
+              <p className="mt-4 text-lg leading-relaxed text-brand-100/85">
                 It starts with one honest conversation about your eyes. LASIK
                 consultations are free, and no one here works on commission.
               </p>

@@ -2,14 +2,14 @@ export type FAQ = { q: string; a: React.ReactNode };
 
 export default function FAQList({ faqs }: { faqs: FAQ[] }) {
   return (
-    <div className="divide-y divide-pine-900/10 rounded-3xl border border-pine-900/10 bg-white px-6 sm:px-8">
+    <div className="divide-y divide-brand-900/10 rounded-3xl border border-brand-900/10 bg-white px-6 sm:px-8">
       {faqs.map((faq, i) => (
         <details key={i} className="group py-5">
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left font-semibold text-pine-950 [&::-webkit-details-marker]:hidden">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left font-semibold text-brand-950 [&::-webkit-details-marker]:hidden">
             <span className="text-[1.05rem]">{faq.q}</span>
             <span
               aria-hidden="true"
-              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-pine-900/15 text-pine-800 transition-transform group-open:rotate-45"
+              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-brand-900/15 text-brand-800 transition-transform group-open:rotate-45"
             >
               <svg
                 viewBox="0 0 16 16"

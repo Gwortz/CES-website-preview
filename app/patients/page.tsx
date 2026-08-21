@@ -59,15 +59,15 @@ export default function PatientsPage() {
             <Reveal key={card.href} delay={i * 60}>
               <Link
                 href={card.href}
-                className="group flex h-full flex-col rounded-3xl border border-pine-900/10 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-pine-900/10"
+                className="group flex h-full flex-col rounded-3xl border border-brand-900/10 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-900/10"
               >
-                <h2 className="font-display text-2xl font-semibold text-pine-950">
+                <h2 className="font-display text-2xl font-semibold text-brand-950">
                   {card.title}
                 </h2>
                 <p className="mt-3 flex-1 leading-relaxed text-ink/75">
                   {card.body}
                 </p>
-                <span className="mt-5 inline-flex items-center gap-2 font-semibold text-copper-700 group-hover:text-copper-800">
+                <span className="mt-5 inline-flex items-center gap-2 font-semibold text-accent-700 group-hover:text-accent-800">
                   Learn more
                   <span
                     aria-hidden="true"

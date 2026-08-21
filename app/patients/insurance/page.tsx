@@ -29,10 +29,10 @@ export default function InsurancePage() {
         <div className="grid gap-6 md:grid-cols-2">
           <Reveal>
             <Card className="h-full">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-pine-600">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-600">
                 Typically covered
               </p>
-              <h2 className="mt-2 font-display text-2xl font-semibold text-pine-950">
+              <h2 className="mt-2 font-display text-2xl font-semibold text-brand-950">
                 Medically necessary care
               </h2>
               <ul className="mt-4 space-y-3 leading-relaxed text-ink/80">
@@ -47,10 +47,10 @@ export default function InsurancePage() {
           </Reveal>
           <Reveal delay={100}>
             <Card className="h-full">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-copper-700">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent-700">
                 Typically out of pocket
               </p>
-              <h2 className="mt-2 font-display text-2xl font-semibold text-pine-950">
+              <h2 className="mt-2 font-display text-2xl font-semibold text-brand-950">
                 Lifestyle upgrades
               </h2>
               <ul className="mt-4 space-y-3 leading-relaxed text-ink/80">
@@ -68,8 +68,8 @@ export default function InsurancePage() {
           </Reveal>
         </div>
         <Reveal className="mt-8">
-          <div className="rounded-3xl bg-pine-50 p-6 sm:p-8">
-            <h2 className="font-display text-xl font-semibold text-pine-950">
+          <div className="rounded-3xl bg-brand-50 p-6 sm:p-8">
+            <h2 className="font-display text-xl font-semibold text-brand-950">
               Plans we accept
             </h2>
             <p className="mt-2 max-w-2xl leading-relaxed text-ink/75">

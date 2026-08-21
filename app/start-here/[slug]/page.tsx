@@ -71,7 +71,7 @@ export default async function AgePathPage({
             </div>
           </Reveal>
           <Reveal delay={100}>
-            <h3 className="text-xs font-bold uppercase tracking-[0.22em] text-copper-700">
+            <h3 className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
               Matched procedures
             </h3>
             <ul className="mt-4 space-y-4">
@@ -79,14 +79,14 @@ export default async function AgePathPage({
                 <li key={proc.name}>
                   <Link
                     href={proc.href}
-                    className="group block rounded-3xl border border-pine-900/10 bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+                    className="group block rounded-3xl border border-brand-900/10 bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
                   >
                     <div className="flex flex-wrap items-center gap-3">
-                      <h4 className="font-display text-xl font-semibold text-pine-950">
+                      <h4 className="font-display text-xl font-semibold text-brand-950">
                         {proc.name}
                       </h4>
                       {proc.tag && (
-                        <span className="rounded-full bg-copper-100 px-3 py-0.5 text-xs font-bold text-copper-800">
+                        <span className="rounded-full bg-accent-100 px-3 py-0.5 text-xs font-bold text-accent-800">
                           {proc.tag}
                         </span>
                       )}
@@ -94,7 +94,7 @@ export default async function AgePathPage({
                     <p className="mt-2 leading-relaxed text-ink/75">
                       {proc.blurb}
                     </p>
-                    <span className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-copper-700 group-hover:text-copper-800">
+                    <span className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-accent-700 group-hover:text-accent-800">
                       Learn more
                       <span
                         aria-hidden="true"
@@ -122,7 +122,7 @@ export default async function AgePathPage({
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           <Reveal>
             <Card className="h-full">
-              <h3 className="font-display text-xl font-semibold text-pine-950">
+              <h3 className="font-display text-xl font-semibold text-brand-950">
                 Usually a good fit
               </h3>
               <div className="mt-4">
@@ -132,7 +132,7 @@ export default async function AgePathPage({
           </Reveal>
           <Reveal delay={100}>
             <Card className="h-full">
-              <h3 className="font-display text-xl font-semibold text-pine-950">
+              <h3 className="font-display text-xl font-semibold text-brand-950">
                 Worth a careful conversation
               </h3>
               <div className="mt-4">
@@ -145,7 +145,7 @@ export default async function AgePathPage({
 
       <Section tone="sand">
         <Reveal>
-          <div className="rounded-3xl border border-pine-900/10 bg-white p-8 sm:p-10">
+          <div className="rounded-3xl border border-brand-900/10 bg-white p-8 sm:p-10">
             <SectionHeading
               eyebrow="If you're not a candidate"
               title={path.notCandidate.title}
@@ -156,9 +156,9 @@ export default async function AgePathPage({
                 <li key={alt.label}>
                   <Link
                     href={alt.href}
-                    className="group block h-full rounded-2xl border border-pine-900/10 bg-cream p-5 transition-colors hover:bg-pine-50"
+                    className="group block h-full rounded-2xl border border-brand-900/10 bg-cream p-5 transition-colors hover:bg-brand-50"
                   >
-                    <p className="font-semibold text-pine-950">
+                    <p className="font-semibold text-brand-950">
                       {alt.label}{" "}
                       <span
                         aria-hidden="true"

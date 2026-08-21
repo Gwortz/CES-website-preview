@@ -37,17 +37,17 @@ function DoctorCard({
     <Reveal delay={delay}>
       <Link
         href={`/doctors/${slug}`}
-        className="group block h-full rounded-3xl border border-pine-900/10 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-pine-900/10"
+        className="group block h-full rounded-3xl border border-brand-900/10 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-900/10"
       >
         <DoctorPhoto photo={photo} name={name} className="aspect-[4/4.5]" />
-        <p className="mt-5 text-xs font-bold uppercase tracking-[0.18em] text-copper-700">
+        <p className="mt-5 text-xs font-bold uppercase tracking-[0.18em] text-accent-700">
           {role}
         </p>
-        <h3 className="mt-1.5 font-display text-xl font-semibold text-pine-950">
+        <h3 className="mt-1.5 font-display text-xl font-semibold text-brand-950">
           {name}
         </h3>
         <p className="mt-1 text-sm leading-snug text-ink/70">{focus}</p>
-        <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-copper-700 group-hover:text-copper-800">
+        <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-accent-700 group-hover:text-accent-800">
           Read bio
           <span
             aria-hidden="true"
@@ -74,7 +74,7 @@ export default function DoctorsPage() {
         </CTALink>
       </PageHero>
 
-      <section className="border-b border-pine-900/10 bg-sand">
+      <section className="border-b border-brand-900/10 bg-sand">
         <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
           <p className="max-w-3xl text-lg leading-relaxed text-ink/80">
             Countless optometrists, physicians, and nurses from around the
@@ -134,7 +134,7 @@ export default function DoctorsPage() {
 
       <Section tone="sand">
         <Reveal>
-          <div className="rounded-3xl border border-pine-900/10 bg-white p-8 sm:p-10">
+          <div className="rounded-3xl border border-brand-900/10 bg-white p-8 sm:p-10">
             <SectionHeading
               eyebrow="For referring doctors"
               title="Your patients come back to you."

@@ -39,6 +39,7 @@ export type Doctor = {
 export const doctors: Doctor[] = [
   {
     slug: "lance-ferguson",
+    photo: "/images/doctors/lance-ferguson.jpg",
     name: "Lance S. Ferguson, MD",
     displayName: "Dr. Lance Ferguson",
     degree: "MD",
@@ -108,6 +109,7 @@ export const doctors: Doctor[] = [
   },
   {
     slug: "gary-wortz",
+    photo: "/images/doctors/gary-wortz.jpg",
     name: "Gary Wörtz, MD",
     displayName: "Dr. Gary Wörtz",
     degree: "MD",
@@ -183,6 +185,7 @@ export const doctors: Doctor[] = [
   },
   {
     slug: "asim-piracha",
+    photo: "/images/doctors/asim-piracha.jpg",
     name: "Asim Piracha, MD",
     displayName: "Dr. Asim Piracha",
     degree: "MD",
@@ -246,6 +249,7 @@ export const doctors: Doctor[] = [
   },
   {
     slug: "howell-findley",
+    photo: "/images/doctors/howell-findley.jpg",
     name: "Howell M. Findley, OD",
     displayName: "Dr. Howell Findley",
     degree: "OD",
@@ -290,6 +294,7 @@ export const doctors: Doctor[] = [
   },
   {
     slug: "marty-smith",
+    photo: "/images/doctors/marty-smith.jpg",
     name: "R. Marty Smith, OD",
     displayName: "Dr. Marty Smith",
     degree: "OD",
@@ -327,6 +332,7 @@ export const doctors: Doctor[] = [
   },
   {
     slug: "christopher-kuc",
+    photo: "/images/doctors/christopher-kuc.jpg",
     name: "Christopher J. Kuc, OD, FAAO",
     displayName: "Dr. Christopher Kuc",
     degree: "OD",

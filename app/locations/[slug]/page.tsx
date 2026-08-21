@@ -65,7 +65,7 @@ export default async function LocationPage({
         </CTALink>
         <a
           href={loc.phoneHref}
-          className="inline-flex items-center justify-center gap-2 rounded-full border-[1.5px] border-pine-900/30 px-7 py-3.5 text-base font-semibold text-pine-950 transition-colors hover:border-pine-900 hover:bg-pine-50"
+          className="inline-flex items-center justify-center gap-2 rounded-full border-[1.5px] border-brand-900/30 px-7 py-3.5 text-base font-semibold text-brand-950 transition-colors hover:border-brand-900 hover:bg-brand-50"
         >
           Call {loc.phone}
         </a>
@@ -82,12 +82,12 @@ export default async function LocationPage({
           </Reveal>
           <Reveal delay={100}>
             <Card>
-              <h2 className="font-display text-2xl font-semibold text-pine-950">
+              <h2 className="font-display text-2xl font-semibold text-brand-950">
                 Visit us
               </h2>
               <dl className="mt-5 space-y-4 text-ink/80">
                 <div>
-                  <dt className="text-xs font-bold uppercase tracking-[0.18em] text-copper-700">
+                  <dt className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">
                     Address
                   </dt>
                   <dd className="mt-1">
@@ -97,20 +97,20 @@ export default async function LocationPage({
                   </dd>
                 </div>
                 <div>
-                  <dt className="text-xs font-bold uppercase tracking-[0.18em] text-copper-700">
+                  <dt className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">
                     Phone
                   </dt>
                   <dd className="mt-1">
                     <a
                       href={loc.phoneHref}
-                      className="font-semibold text-pine-800 underline decoration-pine-300 underline-offset-2 hover:text-pine-950"
+                      className="font-semibold text-brand-800 underline decoration-brand-300 underline-offset-2 hover:text-brand-950"
                     >
                       {loc.phone}
                     </a>
                   </dd>
                 </div>
                 <div>
-                  <dt className="text-xs font-bold uppercase tracking-[0.18em] text-copper-700">
+                  <dt className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">
                     Hours
                   </dt>
                   <dd className="mt-1">
@@ -123,7 +123,7 @@ export default async function LocationPage({
                   </dd>
                 </div>
                 <div>
-                  <dt className="text-xs font-bold uppercase tracking-[0.18em] text-copper-700">
+                  <dt className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">
                     Parking & arrival
                   </dt>
                   <dd className="mt-1">
@@ -170,7 +170,7 @@ export default async function LocationPage({
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 80}>
                 <Card className="h-full">
-                  <h3 className="font-display text-xl font-semibold text-pine-950">
+                  <h3 className="font-display text-xl font-semibold text-brand-950">
                     {item.title}
                   </h3>
                   <p className="mt-2 leading-relaxed text-ink/75">{item.body}</p>

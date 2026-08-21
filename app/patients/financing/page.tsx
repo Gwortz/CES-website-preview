@@ -66,7 +66,7 @@ export default function FinancingPage() {
           ].map((item, i) => (
             <Reveal key={item.title} delay={i * 70}>
               <Card className="h-full">
-                <h2 className="font-display text-xl font-semibold text-pine-950">
+                <h2 className="font-display text-xl font-semibold text-brand-950">
                   {item.title}
                 </h2>
                 <p className="mt-3 leading-relaxed text-ink/75">{item.body}</p>

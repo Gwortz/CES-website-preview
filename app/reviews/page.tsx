@@ -23,10 +23,10 @@ export default function ReviewsPage() {
         title="The Bluegrass talks. We just listen."
         lede="Nothing we write about ourselves matters as much as what patients say at their own dinner tables. Filter by procedure to hear from people who stood where you are standing."
       >
-        <span className="inline-flex items-center gap-3 rounded-2xl border border-pine-900/10 bg-white px-5 py-3">
+        <span className="inline-flex items-center gap-3 rounded-2xl border border-brand-900/10 bg-white px-5 py-3">
           <Stars label="4.8 out of 5 stars" />
           <span className="text-sm leading-snug">
-            <span className="block font-bold text-pine-950">
+            <span className="block font-bold text-brand-950">
               4.8 stars · 865+ Google reviews
             </span>
             <span className="block text-ink/65">
@@ -67,13 +67,13 @@ export default function ReviewsPage() {
           {["A LASIK story", "A cataract story", "An RLE story"].map(
             (label, i) => (
               <Reveal key={label} delay={i * 80}>
-                <div className="rounded-3xl border border-pine-900/10 bg-cream p-5">
+                <div className="rounded-3xl border border-brand-900/10 bg-cream p-5">
                   <ImagePh
                     variant="photo"
                     label={`${label} — feature imagery placeholder`}
                     className="aspect-[16/10]"
                   />
-                  <h3 className="mt-4 font-display text-xl font-semibold text-pine-950">
+                  <h3 className="mt-4 font-display text-xl font-semibold text-brand-950">
                     <Ph>{label} headline</Ph>
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-ink/65">

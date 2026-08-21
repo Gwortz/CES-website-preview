@@ -22,7 +22,7 @@ export default function DoctorPhoto({
       <img
         src={photo}
         alt={`Portrait of ${name}`}
-        className={`w-full border border-pine-900/10 object-cover ${rounded} ${className}`}
+        className={`w-full border border-brand-900/10 object-cover ${rounded} ${className}`}
       />
     );
   }

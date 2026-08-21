@@ -6,7 +6,7 @@ export default function Stars({
   label?: string;
 }) {
   return (
-    <span role="img" aria-label={label} className="inline-flex gap-0.5 text-copper-500">
+    <span role="img" aria-label={label} className="inline-flex gap-0.5 text-amber-500">
       {Array.from({ length: 5 }).map((_, i) => (
         <svg
           key={i}

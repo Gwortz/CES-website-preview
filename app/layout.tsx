@@ -1,20 +1,22 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Figtree } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { site } from "@/content/site";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const fraunces = Fraunces({
-  subsets: ["latin"],
+const fraunces = localFont({
+  src: "./fonts/fraunces-latin.woff2",
   variable: "--font-fraunces",
   display: "swap",
+  weight: "100 900",
 });
 
-const figtree = Figtree({
-  subsets: ["latin"],
+const figtree = localFont({
+  src: "./fonts/figtree-latin.woff2",
   variable: "--font-figtree",
   display: "swap",
+  weight: "300 900",
 });
 
 export const metadata: Metadata = {

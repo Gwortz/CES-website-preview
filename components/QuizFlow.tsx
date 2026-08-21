@@ -27,9 +27,9 @@ function DemoContactForm({ quizTitle }: { quizTitle: string }) {
     return (
       <div
         role="status"
-        className="rounded-2xl border border-pine-200 bg-pine-50 p-6 text-center"
+        className="rounded-2xl border border-brand-200 bg-brand-50 p-6 text-center"
       >
-        <p className="font-display text-xl font-semibold text-pine-950">
+        <p className="font-display text-xl font-semibold text-brand-950">
           Thank you. We got it.
         </p>
         <p className="mt-2 text-ink/75">
@@ -48,7 +48,7 @@ function DemoContactForm({ quizTitle }: { quizTitle: string }) {
         <div>
           <label
             htmlFor="quiz-name"
-            className="block text-sm font-semibold text-pine-950"
+            className="block text-sm font-semibold text-brand-950"
           >
             Name
           </label>
@@ -58,14 +58,14 @@ function DemoContactForm({ quizTitle }: { quizTitle: string }) {
             type="text"
             required
             autoComplete="name"
-            className="mt-1.5 w-full rounded-xl border border-pine-900/20 bg-white px-4 py-2.5 text-ink placeholder:text-ink/40"
+            className="mt-1.5 w-full rounded-xl border border-brand-900/20 bg-white px-4 py-2.5 text-ink placeholder:text-ink/40"
             placeholder="Your name"
           />
         </div>
         <div>
           <label
             htmlFor="quiz-phone"
-            className="block text-sm font-semibold text-pine-950"
+            className="block text-sm font-semibold text-brand-950"
           >
             Phone
           </label>
@@ -75,7 +75,7 @@ function DemoContactForm({ quizTitle }: { quizTitle: string }) {
             type="tel"
             required
             autoComplete="tel"
-            className="mt-1.5 w-full rounded-xl border border-pine-900/20 bg-white px-4 py-2.5 text-ink placeholder:text-ink/40"
+            className="mt-1.5 w-full rounded-xl border border-brand-900/20 bg-white px-4 py-2.5 text-ink placeholder:text-ink/40"
             placeholder="(555) 555-5555"
           />
         </div>
@@ -83,7 +83,7 @@ function DemoContactForm({ quizTitle }: { quizTitle: string }) {
       <div>
         <label
           htmlFor="quiz-email"
-          className="block text-sm font-semibold text-pine-950"
+          className="block text-sm font-semibold text-brand-950"
         >
           Email
         </label>
@@ -93,21 +93,21 @@ function DemoContactForm({ quizTitle }: { quizTitle: string }) {
           type="email"
           required
           autoComplete="email"
-          className="mt-1.5 w-full rounded-xl border border-pine-900/20 bg-white px-4 py-2.5 text-ink placeholder:text-ink/40"
+          className="mt-1.5 w-full rounded-xl border border-brand-900/20 bg-white px-4 py-2.5 text-ink placeholder:text-ink/40"
           placeholder="you@example.com"
         />
       </div>
       <div>
         <label
           htmlFor="quiz-location"
-          className="block text-sm font-semibold text-pine-950"
+          className="block text-sm font-semibold text-brand-950"
         >
           Preferred location
         </label>
         <select
           id="quiz-location"
           name="location"
-          className="mt-1.5 w-full rounded-xl border border-pine-900/20 bg-white px-4 py-2.5 text-ink"
+          className="mt-1.5 w-full rounded-xl border border-brand-900/20 bg-white px-4 py-2.5 text-ink"
         >
           <option value="lexington">Lexington</option>
           <option value="louisville">Louisville</option>
@@ -116,7 +116,7 @@ function DemoContactForm({ quizTitle }: { quizTitle: string }) {
       </div>
       <button
         type="submit"
-        className="w-full rounded-full bg-pine-950 px-6 py-3 font-semibold text-cream transition-colors hover:bg-pine-800"
+        className="w-full rounded-full bg-brand-950 px-6 py-3 font-semibold text-cream transition-colors hover:bg-brand-800"
       >
         Request a call back
       </button>
@@ -171,14 +171,14 @@ export default function QuizFlow({ slug }: { slug: QuizSlug }) {
     const result = quiz.results[resultId];
     return (
       <div className="mx-auto max-w-2xl">
-        <div className="rounded-3xl border border-pine-900/10 bg-white p-7 shadow-sm sm:p-10">
-          <p className="text-xs font-bold uppercase tracking-[0.22em] text-copper-700">
+        <div className="rounded-3xl border border-brand-900/10 bg-white p-7 shadow-sm sm:p-10">
+          <p className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
             {result.badge}
           </p>
           <h2
             ref={headingRef}
             tabIndex={-1}
-            className="mt-3 font-display text-2xl font-semibold text-pine-950 outline-none sm:text-3xl"
+            className="mt-3 font-display text-2xl font-semibold text-brand-950 outline-none sm:text-3xl"
           >
             {result.title}
           </h2>
@@ -192,7 +192,7 @@ export default function QuizFlow({ slug }: { slug: QuizSlug }) {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="inline-flex items-center gap-2 rounded-full border-[1.5px] border-pine-900/25 px-5 py-2.5 text-sm font-semibold text-pine-950 transition-colors hover:border-pine-900 hover:bg-pine-50"
+                  className="inline-flex items-center gap-2 rounded-full border-[1.5px] border-brand-900/25 px-5 py-2.5 text-sm font-semibold text-brand-950 transition-colors hover:border-brand-900 hover:bg-brand-50"
                 >
                   {link.label}
                   <span aria-hidden="true">&rarr;</span>
@@ -200,12 +200,12 @@ export default function QuizFlow({ slug }: { slug: QuizSlug }) {
               </li>
             ))}
           </ul>
-          <div className="mt-8 rounded-2xl bg-pine-950 p-6 sm:p-8">
+          <div className="mt-8 rounded-2xl bg-brand-950 p-6 sm:p-8">
             <div className="on-dark">
               <h3 className="font-display text-xl font-semibold text-cream">
                 The next step is a conversation.
               </h3>
-              <p className="mt-2 text-pine-100/85">
+              <p className="mt-2 text-brand-100/85">
                 Book online, or leave your details and we will call you.
               </p>
               <div className="mt-5">
@@ -215,8 +215,8 @@ export default function QuizFlow({ slug }: { slug: QuizSlug }) {
               </div>
             </div>
           </div>
-          <div className="mt-8 border-t border-pine-900/10 pt-8">
-            <h3 className="font-display text-xl font-semibold text-pine-950">
+          <div className="mt-8 border-t border-brand-900/10 pt-8">
+            <h3 className="font-display text-xl font-semibold text-brand-950">
               Or have us reach out
             </h3>
             <div className="mt-4">
@@ -231,14 +231,14 @@ export default function QuizFlow({ slug }: { slug: QuizSlug }) {
           <button
             type="button"
             onClick={back}
-            className="text-sm font-semibold text-ink/60 hover:text-pine-950"
+            className="text-sm font-semibold text-ink/60 hover:text-brand-950"
           >
             &larr; Change my last answer
           </button>
           <button
             type="button"
             onClick={restart}
-            className="text-sm font-semibold text-ink/60 hover:text-pine-950"
+            className="text-sm font-semibold text-ink/60 hover:text-brand-950"
           >
             Start over
           </button>
@@ -249,20 +249,20 @@ export default function QuizFlow({ slug }: { slug: QuizSlug }) {
 
   return (
     <div className="mx-auto max-w-2xl">
-      <div aria-hidden="true" className="mb-3 h-1.5 overflow-hidden rounded-full bg-pine-100">
+      <div aria-hidden="true" className="mb-3 h-1.5 overflow-hidden rounded-full bg-brand-100">
         <div
-          className="h-full rounded-full bg-copper-500 transition-all duration-300"
+          className="h-full rounded-full bg-accent-500 transition-all duration-300"
           style={{ width: `${(step / total) * 100}%` }}
         />
       </div>
       <p className="text-sm font-semibold text-ink/60" aria-live="polite">
         Question {step + 1} of {total}
       </p>
-      <div className="mt-4 rounded-3xl border border-pine-900/10 bg-white p-7 shadow-sm sm:p-10">
+      <div className="mt-4 rounded-3xl border border-brand-900/10 bg-white p-7 shadow-sm sm:p-10">
         <h2
           ref={headingRef}
           tabIndex={-1}
-          className="font-display text-2xl font-semibold text-pine-950 outline-none sm:text-3xl"
+          className="font-display text-2xl font-semibold text-brand-950 outline-none sm:text-3xl"
         >
           {question.prompt}
         </h2>
@@ -280,11 +280,11 @@ export default function QuizFlow({ slug }: { slug: QuizSlug }) {
                 aria-pressed={selected}
                 className={`block w-full rounded-2xl border-[1.5px] px-5 py-4 text-left transition-colors ${
                   selected
-                    ? "border-pine-800 bg-pine-50"
-                    : "border-pine-900/15 bg-cream hover:border-pine-800 hover:bg-pine-50"
+                    ? "border-brand-800 bg-brand-50"
+                    : "border-brand-900/15 bg-cream hover:border-brand-800 hover:bg-brand-50"
                 }`}
               >
-                <span className="block font-semibold text-pine-950">
+                <span className="block font-semibold text-brand-950">
                   {opt.label}
                 </span>
                 {opt.sub && (
@@ -302,7 +302,7 @@ export default function QuizFlow({ slug }: { slug: QuizSlug }) {
           <button
             type="button"
             onClick={back}
-            className="text-sm font-semibold text-ink/60 hover:text-pine-950"
+            className="text-sm font-semibold text-ink/60 hover:text-brand-950"
           >
             &larr; Back
           </button>

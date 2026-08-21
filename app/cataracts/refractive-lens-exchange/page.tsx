@@ -88,7 +88,7 @@ export default function RLEPage() {
               className="aspect-[4/3]"
             />
             <Card className="mt-6">
-              <h3 className="font-display text-xl font-semibold text-pine-950">
+              <h3 className="font-display text-xl font-semibold text-brand-950">
                 RLE in one sentence
               </h3>
               <p className="mt-2 leading-relaxed text-ink/80">
@@ -110,14 +110,14 @@ export default function RLEPage() {
         <ol className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, i) => (
             <Reveal key={step.title} delay={i * 70} as="li">
-              <div className="h-full rounded-3xl border border-pine-900/10 bg-cream p-6">
+              <div className="h-full rounded-3xl border border-brand-900/10 bg-cream p-6">
                 <span
                   aria-hidden="true"
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-pine-950 font-display text-lg font-semibold text-cream"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-950 font-display text-lg font-semibold text-cream"
                 >
                   {i + 1}
                 </span>
-                <h3 className="mt-4 font-display text-lg font-semibold text-pine-950">
+                <h3 className="mt-4 font-display text-lg font-semibold text-brand-950">
                   {step.title}
                 </h3>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-ink/75">
@@ -128,9 +128,9 @@ export default function RLEPage() {
           ))}
         </ol>
         <Reveal className="mt-10">
-          <div className="flex flex-col items-start gap-4 rounded-3xl bg-pine-50 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+          <div className="flex flex-col items-start gap-4 rounded-3xl bg-brand-50 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
             <div>
-              <h3 className="font-display text-xl font-semibold text-pine-950">
+              <h3 className="font-display text-xl font-semibold text-brand-950">
                 The lens is the decision that matters.
               </h3>
               <p className="mt-1 text-ink/70">
@@ -149,7 +149,7 @@ export default function RLEPage() {
         <div className="grid gap-6 md:grid-cols-2">
           <Reveal>
             <Card className="h-full">
-              <h2 className="font-display text-xl font-semibold text-pine-950">
+              <h2 className="font-display text-xl font-semibold text-brand-950">
                 RLE tends to fit
               </h2>
               <div className="mt-4">
@@ -165,8 +165,8 @@ export default function RLEPage() {
             </Card>
           </Reveal>
           <Reveal delay={100}>
-            <Card className="h-full border-copper-200 bg-copper-50/50">
-              <h2 className="font-display text-xl font-semibold text-pine-950">
+            <Card className="h-full border-accent-200 bg-accent-50/50">
+              <h2 className="font-display text-xl font-semibold text-brand-950">
                 Honest cautions
               </h2>
               <div className="mt-4">
@@ -193,7 +193,7 @@ export default function RLEPage() {
 
       <Section tone="sand">
         <Reveal>
-          <div className="rounded-3xl border border-pine-900/10 bg-white p-8 sm:p-10">
+          <div className="rounded-3xl border border-brand-900/10 bg-white p-8 sm:p-10">
             <SectionHeading
               eyebrow="One more honest note"
               title="RLE and cataract surgery are the same operation."

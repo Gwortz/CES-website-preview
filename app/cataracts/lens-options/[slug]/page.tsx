@@ -82,7 +82,7 @@ export default async function LensPage({
               />
             )}
             <Card className="mt-6">
-              <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-copper-700">
+              <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-accent-700">
                 Cost note
               </h3>
               <p className="mt-2 leading-relaxed text-ink/80">{lens.costNote}</p>
@@ -100,7 +100,7 @@ export default async function LensPage({
         <div className="grid gap-6 md:grid-cols-2">
           <Reveal>
             <Card className="h-full">
-              <h2 className="font-display text-xl font-semibold text-pine-950">
+              <h2 className="font-display text-xl font-semibold text-brand-950">
                 Who it tends to fit
               </h2>
               <div className="mt-4">
@@ -109,8 +109,8 @@ export default async function LensPage({
             </Card>
           </Reveal>
           <Reveal delay={100}>
-            <Card className="h-full border-copper-200 bg-copper-50/50">
-              <h2 className="font-display text-xl font-semibold text-pine-950">
+            <Card className="h-full border-accent-200 bg-accent-50/50">
+              <h2 className="font-display text-xl font-semibold text-brand-950">
                 The honest tradeoffs
               </h2>
               <div className="mt-4">
@@ -132,9 +132,9 @@ export default async function LensPage({
               <li key={other.slug}>
                 <Link
                   href={`/cataracts/lens-options/${other.slug}`}
-                  className="group block h-full rounded-2xl border border-pine-900/10 bg-white p-5 transition-colors hover:bg-pine-50"
+                  className="group block h-full rounded-2xl border border-brand-900/10 bg-white p-5 transition-colors hover:bg-brand-50"
                 >
-                  <p className="font-semibold text-pine-950">
+                  <p className="font-semibold text-brand-950">
                     {other.shortName}{" "}
                     <span
                       aria-hidden="true"

@@ -4,14 +4,14 @@ type CTAVariant = "primary" | "accent" | "secondary" | "onDark" | "link";
 
 const ctaStyles: Record<CTAVariant, string> = {
   primary:
-    "bg-pine-950 text-cream hover:bg-pine-800 shadow-sm rounded-full font-semibold",
+    "bg-brand-950 text-cream hover:bg-brand-800 shadow-sm rounded-full font-semibold",
   accent:
-    "bg-copper-600 text-white hover:bg-copper-700 shadow-sm rounded-full font-semibold",
+    "bg-accent-600 text-white hover:bg-accent-700 shadow-sm rounded-full font-semibold",
   secondary:
-    "border-[1.5px] border-pine-900/30 text-pine-950 hover:border-pine-900 hover:bg-pine-50 rounded-full font-semibold",
+    "border-[1.5px] border-brand-900/30 text-brand-950 hover:border-brand-900 hover:bg-brand-50 rounded-full font-semibold",
   onDark:
     "border-[1.5px] border-cream/40 text-cream hover:bg-cream/10 hover:border-cream rounded-full font-semibold",
-  link: "text-copper-700 font-semibold hover:text-copper-800 underline-offset-4 hover:underline",
+  link: "text-accent-700 font-semibold hover:text-accent-800 underline-offset-4 hover:underline",
 };
 
 export function CTALink({
@@ -60,7 +60,7 @@ export function Eyebrow({
   return (
     <p
       className={`text-xs font-bold uppercase tracking-[0.22em] ${
-        dark ? "text-copper-300" : "text-copper-700"
+        dark ? "text-accent-300" : "text-accent-700"
       }`}
     >
       {children}
@@ -88,7 +88,7 @@ export function SectionHeading({
       {eyebrow && <Eyebrow dark={dark}>{eyebrow}</Eyebrow>}
       <Tag
         className={`mt-3 font-display text-3xl font-semibold tracking-tight text-balance sm:text-4xl ${
-          dark ? "text-cream" : "text-pine-950"
+          dark ? "text-cream" : "text-brand-950"
         }`}
       >
         {title}
@@ -96,7 +96,7 @@ export function SectionHeading({
       {lede && (
         <p
           className={`mt-4 text-lg leading-relaxed ${
-            dark ? "text-pine-100/85" : "text-ink/75"
+            dark ? "text-brand-100/85" : "text-ink/75"
           }`}
         >
           {lede}
@@ -121,7 +121,7 @@ export function Section({
     cream: "bg-cream",
     sand: "bg-sand",
     white: "bg-white",
-    dark: "on-dark bg-pine-950 text-pine-100",
+    dark: "on-dark bg-brand-950 text-brand-100",
   };
   return (
     <section id={id} className={`${tones[tone]} ${className}`}>
@@ -144,7 +144,7 @@ export function PageHero({
   children?: React.ReactNode;
 }) {
   return (
-    <div className="border-b border-pine-900/10 bg-gradient-to-b from-pine-50 to-cream">
+    <div className="border-b border-brand-900/10 bg-gradient-to-b from-brand-50 to-cream">
       <div className="mx-auto max-w-7xl px-4 pb-12 pt-14 sm:px-6 sm:pb-16 sm:pt-20 lg:px-8">
         <SectionHeading eyebrow={eyebrow} title={title} lede={lede} as="h1" />
         {children && <div className="mt-8 flex flex-wrap gap-3">{children}</div>}
@@ -164,7 +164,7 @@ export function CheckList({
     tone === "check" ? (
       <svg
         viewBox="0 0 20 20"
-        className="mt-1 h-4 w-4 shrink-0 text-pine-600"
+        className="mt-1 h-4 w-4 shrink-0 text-brand-600"
         fill="none"
         stroke="currentColor"
         strokeWidth="2.2"
@@ -177,7 +177,7 @@ export function CheckList({
     ) : tone === "caution" ? (
       <svg
         viewBox="0 0 20 20"
-        className="mt-1 h-4 w-4 shrink-0 text-copper-600"
+        className="mt-1 h-4 w-4 shrink-0 text-amber-600"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -190,7 +190,7 @@ export function CheckList({
     ) : (
       <svg
         viewBox="0 0 20 20"
-        className="mt-1 h-4 w-4 shrink-0 text-copper-600"
+        className="mt-1 h-4 w-4 shrink-0 text-accent-600"
         fill="none"
         stroke="currentColor"
         strokeWidth="2.2"
@@ -222,7 +222,7 @@ export function Card({
 }) {
   return (
     <div
-      className={`rounded-3xl border border-pine-900/10 bg-white p-6 shadow-sm sm:p-8 ${className}`}
+      className={`rounded-3xl border border-brand-900/10 bg-white p-6 shadow-sm sm:p-8 ${className}`}
     >
       {children}
     </div>

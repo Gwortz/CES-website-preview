@@ -33,12 +33,12 @@ export default function StartHerePage() {
             <Reveal key={path.slug} delay={i * 90}>
               <Link
                 href={`/start-here/${path.slug}`}
-                className="group flex h-full flex-col rounded-3xl border border-pine-900/10 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-pine-900/10"
+                className="group flex h-full flex-col rounded-3xl border border-brand-900/10 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-900/10"
               >
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-copper-700">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent-700">
                   {path.ageLabel}
                 </p>
-                <h2 className="mt-3 font-display text-2xl font-semibold text-pine-950">
+                <h2 className="mt-3 font-display text-2xl font-semibold text-brand-950">
                   {path.cardTitle}
                 </h2>
                 <p className="mt-3 flex-1 leading-relaxed text-ink/75">
@@ -48,13 +48,13 @@ export default function StartHerePage() {
                   {path.procedures.slice(0, 3).map((proc) => (
                     <li
                       key={proc.name}
-                      className="rounded-full bg-pine-50 px-3 py-1 text-xs font-semibold text-pine-800"
+                      className="rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-800"
                     >
                       {proc.name}
                     </li>
                   ))}
                 </ul>
-                <span className="mt-6 inline-flex items-center gap-2 font-semibold text-copper-700 group-hover:text-copper-800">
+                <span className="mt-6 inline-flex items-center gap-2 font-semibold text-accent-700 group-hover:text-accent-800">
                   Explore this path
                   <span
                     aria-hidden="true"

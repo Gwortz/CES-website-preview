@@ -34,7 +34,7 @@ export default function TravelingPage() {
         <div className="grid gap-6 md:grid-cols-3">
           <Reveal>
             <Card className="h-full">
-              <h2 className="font-display text-xl font-semibold text-pine-950">
+              <h2 className="font-display text-xl font-semibold text-brand-950">
                 Partner hotels
               </h2>
               <p className="mt-3 leading-relaxed text-ink/75">
@@ -46,7 +46,7 @@ export default function TravelingPage() {
           </Reveal>
           <Reveal delay={70}>
             <Card className="h-full">
-              <h2 className="font-display text-xl font-semibold text-pine-950">
+              <h2 className="font-display text-xl font-semibold text-brand-950">
                 Compressed schedules
               </h2>
               <p className="mt-3 leading-relaxed text-ink/75">
@@ -58,7 +58,7 @@ export default function TravelingPage() {
           </Reveal>
           <Reveal delay={140}>
             <Card className="h-full">
-              <h2 className="font-display text-xl font-semibold text-pine-950">
+              <h2 className="font-display text-xl font-semibold text-brand-950">
                 Follow-up near home
               </h2>
               <p className="mt-3 leading-relaxed text-ink/75">

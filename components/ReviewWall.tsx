@@ -25,8 +25,8 @@ export default function ReviewWall() {
             aria-pressed={filter === f}
             className={`rounded-full border-[1.5px] px-4 py-2 text-sm font-semibold transition-colors ${
               filter === f
-                ? "border-pine-950 bg-pine-950 text-cream"
-                : "border-pine-900/20 bg-white text-pine-950 hover:border-pine-900/60"
+                ? "border-brand-950 bg-brand-950 text-cream"
+                : "border-brand-900/20 bg-white text-brand-950 hover:border-brand-900/60"
             }`}
           >
             {f}
@@ -40,10 +40,10 @@ export default function ReviewWall() {
       <ul className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {visible.map((review) => (
           <li key={review.id}>
-            <figure className="flex h-full flex-col rounded-3xl border border-pine-900/10 bg-white p-7 shadow-sm">
+            <figure className="flex h-full flex-col rounded-3xl border border-brand-900/10 bg-white p-7 shadow-sm">
               <div className="flex items-center justify-between gap-3">
                 <Stars className="h-4 w-4" />
-                <span className="rounded-full bg-pine-50 px-3 py-1 text-xs font-semibold text-pine-800">
+                <span className="rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-800">
                   {review.procedure}
                 </span>
               </div>
@@ -51,7 +51,7 @@ export default function ReviewWall() {
                 &ldquo;{review.text}&rdquo;
               </blockquote>
               <figcaption className="mt-5">
-                <p className="font-semibold text-pine-950">
+                <p className="font-semibold text-brand-950">
                   {review.name}{" "}
                   <span className="font-normal text-ink/60">
                     · {review.location}

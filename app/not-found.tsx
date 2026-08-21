@@ -2,12 +2,12 @@ import { CTALink } from "@/components/ui";
 
 export default function NotFound() {
   return (
-    <div className="flex min-h-[60vh] items-center justify-center bg-gradient-to-b from-pine-50 to-cream px-4">
+    <div className="flex min-h-[60vh] items-center justify-center bg-gradient-to-b from-brand-50 to-cream px-4">
       <div className="max-w-xl text-center">
-        <p className="text-xs font-bold uppercase tracking-[0.22em] text-copper-700">
+        <p className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
           Page not found
         </p>
-        <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-pine-950">
+        <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-brand-950">
           Well, that page is blurry.
         </h1>
         <p className="mt-4 text-lg leading-relaxed text-ink/75">

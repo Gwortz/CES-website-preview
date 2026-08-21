@@ -24,7 +24,7 @@ export default function LocationsPage() {
         <div className="grid gap-8 lg:grid-cols-2">
           {locations.map((loc, i) => (
             <Reveal key={loc.slug} delay={i * 90}>
-              <div className="overflow-hidden rounded-3xl border border-pine-900/10 bg-white shadow-sm">
+              <div className="overflow-hidden rounded-3xl border border-brand-900/10 bg-white shadow-sm">
                 <div className="relative">
                   <ImagePh
                     variant="map"
@@ -33,19 +33,19 @@ export default function LocationsPage() {
                     rounded="rounded-none"
                   />
                   {loc.badge && (
-                    <span className="absolute left-4 top-4 rounded-full bg-copper-600 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-white shadow">
+                    <span className="absolute left-4 top-4 rounded-full bg-accent-600 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-white shadow">
                       {loc.badge}
                     </span>
                   )}
                 </div>
                 <div className="p-8">
-                  <h2 className="font-display text-3xl font-semibold text-pine-950">
+                  <h2 className="font-display text-3xl font-semibold text-brand-950">
                     {loc.name}
                   </h2>
                   <p className="mt-3 leading-relaxed text-ink/75">{loc.blurb}</p>
                   <dl className="mt-6 space-y-3 text-ink/80">
                     <div className="flex gap-3">
-                      <dt className="w-20 shrink-0 text-sm font-bold uppercase tracking-wider text-copper-700">
+                      <dt className="w-20 shrink-0 text-sm font-bold uppercase tracking-wider text-accent-700">
                         Address
                       </dt>
                       <dd>
@@ -53,20 +53,20 @@ export default function LocationsPage() {
                       </dd>
                     </div>
                     <div className="flex gap-3">
-                      <dt className="w-20 shrink-0 text-sm font-bold uppercase tracking-wider text-copper-700">
+                      <dt className="w-20 shrink-0 text-sm font-bold uppercase tracking-wider text-accent-700">
                         Phone
                       </dt>
                       <dd>
                         <a
                           href={loc.phoneHref}
-                          className="font-semibold text-pine-800 underline decoration-pine-300 underline-offset-2 hover:text-pine-950"
+                          className="font-semibold text-brand-800 underline decoration-brand-300 underline-offset-2 hover:text-brand-950"
                         >
                           {loc.phone}
                         </a>
                       </dd>
                     </div>
                     <div className="flex gap-3">
-                      <dt className="w-20 shrink-0 text-sm font-bold uppercase tracking-wider text-copper-700">
+                      <dt className="w-20 shrink-0 text-sm font-bold uppercase tracking-wider text-accent-700">
                         Hours
                       </dt>
                       <dd>

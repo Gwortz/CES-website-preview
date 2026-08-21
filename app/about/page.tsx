@@ -74,7 +74,7 @@ export default function AboutPage() {
                 title="Welcome to Commonwealth Eye Surgery"
               />
               <Card>
-                <h3 className="font-display text-xl font-semibold text-pine-950">
+                <h3 className="font-display text-xl font-semibold text-brand-950">
                   The surgery center
                 </h3>
                 <div className="mt-4">
@@ -121,14 +121,14 @@ export default function AboutPage() {
             },
           ].map((award, i) => (
             <Reveal key={award.name} delay={i * 60} as="li">
-              <div className="flex h-full flex-col items-center rounded-3xl border border-pine-900/10 bg-cream p-6 text-center">
+              <div className="flex h-full flex-col items-center rounded-3xl border border-brand-900/10 bg-cream p-6 text-center">
                 <ImagePh
                   variant="badge"
                   label="Official award badge artwork placeholder"
                   className="aspect-square w-24"
                   rounded="rounded-full"
                 />
-                <p className="mt-4 text-sm font-semibold text-pine-950">
+                <p className="mt-4 text-sm font-semibold text-brand-950">
                   {award.name}
                 </p>
                 <p className="mt-1 text-xs text-ink/60">{award.detail}</p>
@@ -167,7 +167,7 @@ export default function AboutPage() {
                   href={site.eyeSurgeryTodayUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 font-semibold text-copper-700 hover:text-copper-800"
+                  className="inline-flex items-center gap-2 font-semibold text-accent-700 hover:text-accent-800"
                 >
                   Visit EyeSurgeryToday.com
                   <span aria-hidden="true">&#8599;</span>

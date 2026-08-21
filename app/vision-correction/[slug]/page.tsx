@@ -77,16 +77,16 @@ export default async function ProcedurePage({
       {/* At a glance */}
       <section
         aria-label={`${proc.name} at a glance`}
-        className="border-b border-pine-900/10 bg-sand"
+        className="border-b border-brand-900/10 bg-sand"
       >
         <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
           <dl className="grid grid-cols-2 gap-x-6 gap-y-6 lg:grid-cols-4">
             {proc.atAGlance.map((item) => (
               <div key={item.label}>
-                <dt className="text-xs font-bold uppercase tracking-[0.18em] text-copper-700">
+                <dt className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">
                   {item.label}
                 </dt>
-                <dd className="mt-1.5 font-semibold leading-snug text-pine-950">
+                <dd className="mt-1.5 font-semibold leading-snug text-brand-950">
                   {item.value}
                 </dd>
               </div>
@@ -120,12 +120,12 @@ export default async function ProcedurePage({
                 <li key={step.title} className="flex gap-5">
                   <span
                     aria-hidden="true"
-                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-pine-950 font-display text-lg font-semibold text-cream"
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-950 font-display text-lg font-semibold text-cream"
                   >
                     {i + 1}
                   </span>
                   <div>
-                    <h3 className="font-display text-xl font-semibold text-pine-950">
+                    <h3 className="font-display text-xl font-semibold text-brand-950">
                       {step.title}
                     </h3>
                     <p className="mt-1.5 leading-relaxed text-ink/75">
@@ -161,7 +161,7 @@ export default async function ProcedurePage({
         <div className="grid gap-6 md:grid-cols-2">
           <Reveal>
             <Card className="h-full">
-              <h2 className="font-display text-xl font-semibold text-pine-950">
+              <h2 className="font-display text-xl font-semibold text-brand-950">
                 Usually a good fit
               </h2>
               <div className="mt-4">
@@ -171,7 +171,7 @@ export default async function ProcedurePage({
           </Reveal>
           <Reveal delay={100}>
             <Card className="h-full">
-              <h2 className="font-display text-xl font-semibold text-pine-950">
+              <h2 className="font-display text-xl font-semibold text-brand-950">
                 Worth a careful conversation
               </h2>
               <div className="mt-4">
@@ -202,9 +202,9 @@ export default async function ProcedurePage({
               <li key={link.label}>
                 <Link
                   href={link.href}
-                  className="group block h-full rounded-2xl border border-pine-900/10 bg-white p-5 transition-colors hover:bg-pine-50"
+                  className="group block h-full rounded-2xl border border-brand-900/10 bg-white p-5 transition-colors hover:bg-brand-50"
                 >
-                  <p className="font-semibold text-pine-950">
+                  <p className="font-semibold text-brand-950">
                     {link.label}{" "}
                     <span
                       aria-hidden="true"

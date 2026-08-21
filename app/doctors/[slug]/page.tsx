@@ -48,18 +48,18 @@ export default async function DoctorPage({
   return (
     <>
       {/* Bio hero */}
-      <div className="border-b border-pine-900/10 bg-gradient-to-b from-pine-50 to-cream">
+      <div className="border-b border-brand-900/10 bg-gradient-to-b from-brand-50 to-cream">
         <div className="mx-auto max-w-7xl px-4 pb-12 pt-14 sm:px-6 sm:pb-16 sm:pt-20 lg:px-8">
           <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
             <div>
               <Eyebrow>{doc.role}</Eyebrow>
-              <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-pine-950 sm:text-5xl">
+              <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-brand-950 sm:text-5xl">
                 {doc.name}
               </h1>
               <p className="mt-3 text-xl text-ink/75">{doc.focus}</p>
               {doc.quote && (
-                <blockquote className="mt-8 border-l-4 border-copper-500 pl-5">
-                  <p className="font-display text-2xl leading-snug text-pine-900">
+                <blockquote className="mt-8 border-l-4 border-accent-500 pl-5">
+                  <p className="font-display text-2xl leading-snug text-brand-900">
                     &ldquo;{doc.quote}&rdquo;
                   </p>
                 </blockquote>
@@ -116,12 +116,12 @@ export default async function DoctorPage({
             {doc.credentials.map((cred) => (
               <div
                 key={cred.label}
-                className="rounded-2xl border border-pine-900/10 bg-white p-5"
+                className="rounded-2xl border border-brand-900/10 bg-white p-5"
               >
-                <dt className="text-xs font-bold uppercase tracking-[0.18em] text-copper-700">
+                <dt className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">
                   {cred.label}
                 </dt>
-                <dd className="mt-2 font-medium leading-snug text-pine-950">
+                <dd className="mt-2 font-medium leading-snug text-brand-950">
                   {cred.placeholder ? <Ph>{cred.value}</Ph> : cred.value}
                 </dd>
               </div>
@@ -143,7 +143,7 @@ export default async function DoctorPage({
             {doc.innovation.map((item, i) => (
               <Reveal key={item.title} delay={i * 80}>
                 <Card className="h-full">
-                  <h3 className="font-display text-xl font-semibold text-pine-950">
+                  <h3 className="font-display text-xl font-semibold text-brand-950">
                     {item.title}
                   </h3>
                   <p className="mt-3 leading-relaxed text-ink/75">
@@ -172,9 +172,9 @@ export default async function DoctorPage({
                 <li key={other.slug}>
                   <Link
                     href={`/doctors/${other.slug}`}
-                    className="group block h-full rounded-2xl border border-pine-900/10 bg-white p-4 transition-colors hover:bg-pine-50"
+                    className="group block h-full rounded-2xl border border-brand-900/10 bg-white p-4 transition-colors hover:bg-brand-50"
                   >
-                    <p className="text-sm font-semibold leading-snug text-pine-950">
+                    <p className="text-sm font-semibold leading-snug text-brand-950">
                       {other.name}
                     </p>
                     <p className="mt-1 text-xs text-ink/60">{other.role}</p>
