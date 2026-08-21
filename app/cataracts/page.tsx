@@ -11,6 +11,8 @@ import {
 import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
 import ImagePh from "@/components/ImagePh";
+import VideoSection from "@/components/VideoSection";
+import { videosFor } from "@/content/videos";
 
 export const metadata: Metadata = {
   title: "Cataract Surgery, Explained Like You're Family",
@@ -197,6 +199,16 @@ export default function CataractsPage() {
           </Reveal>
         </div>
       </Section>
+
+      <VideoSection
+        title="Watch, then decide."
+        lede="Our surgeons explain cataract surgery and lens options in their own words, and our patients describe what changed. All from the practice's YouTube channel."
+        videos={[
+          ...videosFor("Cataract", "explainer"),
+          ...videosFor("Cataract", "testimonial"),
+        ].slice(0, 6)}
+        tone="white"
+      />
 
       <Section tone="sand" id="yag">
         <Reveal>

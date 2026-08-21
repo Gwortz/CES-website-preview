@@ -18,6 +18,8 @@ export type Lens = {
     glassesAfter: string;
   };
   costNote: string;
+  /** Real explainer video from the practice's YouTube channel, when one exists. */
+  video?: { id: string; title: string };
 };
 
 export const lenses: Lens[] = [
@@ -119,6 +121,10 @@ export const lenses: Lens[] = [
     },
     costNote:
       "Premium lens with an adjustment visit schedule. Financing available.",
+    video: {
+      id: "b11d1f6L5_I",
+      title: "The Light Adjustable Lens, explained by our team",
+    },
   },
   {
     slug: "edof",

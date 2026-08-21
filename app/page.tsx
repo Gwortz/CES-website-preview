@@ -9,6 +9,8 @@ import Ph from "@/components/Ph";
 import ImagePh from "@/components/ImagePh";
 import DoctorPhoto from "@/components/DoctorPhoto";
 import Stars from "@/components/Stars";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
+import { getVideo } from "@/content/videos";
 
 export const metadata: Metadata = {
   title: `${site.name} — Choose the Doctors the Doctors Choose`,
@@ -42,7 +44,12 @@ const agePaths = [
   },
 ];
 
-const videoTestimonials = ["LASIK", "RLE", "Light Adjustable Lens", "Trifocal"];
+const videoTestimonialIds = [
+  "PsS0ow9UYUY", // Kevin Skidmore, OD — a doctor choosing us for his own LASIK
+  "EchitPzl2Kg", // Andrew — LASIK
+  "a6cO0qZ6KjE", // Richard — cataract
+  "x1v2fKMm3Rw", // Bruce — laser cataract
+];
 
 export default function HomePage() {
   return (
@@ -178,9 +185,14 @@ export default function HomePage() {
               lede="Our best marketing has always been the person across the dinner table who can suddenly read the menu."
             />
             <div className="flex items-center gap-3 rounded-2xl border border-pine-900/10 bg-cream px-5 py-4">
-              <Stars />
-              <div className="text-sm leading-tight">
-                <Ph>X.X stars · X,XXX Google reviews</Ph>
+              <Stars label="4.8 out of 5 stars" />
+              <div className="text-sm leading-snug">
+                <p className="font-bold text-pine-950">
+                  4.8 stars · 865+ Google reviews
+                </p>
+                <p className="text-ink/65">
+                  6,155+ verified patient reviews on rater8
+                </p>
               </div>
             </div>
           </div>
@@ -224,16 +236,16 @@ export default function HomePage() {
               All reviews and stories
             </CTALink>
           </div>
-          <ul className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
-            {videoTestimonials.map((label) => (
-              <li key={label}>
-                <ImagePh
-                  variant="video"
-                  label={`${label} patient story · video placeholder`}
-                  className="aspect-video"
-                />
-              </li>
-            ))}
+          <ul className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {videoTestimonialIds.map((id) => {
+              const video = getVideo(id);
+              if (!video) return null;
+              return (
+                <li key={id}>
+                  <YouTubeEmbed videoId={video.id} title={video.title} />
+                </li>
+              );
+            })}
           </ul>
         </Reveal>
       </Section>

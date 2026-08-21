@@ -77,9 +77,11 @@ export default function DoctorsPage() {
       <section className="border-b border-pine-900/10 bg-sand">
         <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
           <p className="max-w-3xl text-lg leading-relaxed text-ink/80">
-            <Ph>XXX doctors and their families</Ph> have trusted Commonwealth
-            Eye Surgery with their own vision. That referral pattern is the
-            credential we are proudest of.
+            Countless optometrists, physicians, and nurses from around the
+            Commonwealth of Kentucky have chosen Drs. Ferguson, Wörtz, and
+            Piracha for eye surgery for themselves and their family members.
+            That referral pattern is the credential we are proudest of.{" "}
+            <Ph>Exact referral count, if the practice wants one shown</Ph>
           </p>
         </div>
       </section>

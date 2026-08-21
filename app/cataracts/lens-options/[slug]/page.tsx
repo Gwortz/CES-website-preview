@@ -13,6 +13,7 @@ import {
 import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
 import ImagePh from "@/components/ImagePh";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 
 export function generateStaticParams() {
   return lenses.map((l) => ({ slug: l.slug }));
@@ -71,11 +72,15 @@ export default async function LensPage({
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <ImagePh
-              variant="photo"
-              label={`${lens.shortName} lens — optical diagram placeholder`}
-              className="aspect-[4/3]"
-            />
+            {lens.video ? (
+              <YouTubeEmbed videoId={lens.video.id} title={lens.video.title} />
+            ) : (
+              <ImagePh
+                variant="photo"
+                label={`${lens.shortName} lens — optical diagram placeholder`}
+                className="aspect-[4/3]"
+              />
+            )}
             <Card className="mt-6">
               <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-copper-700">
                 Cost note

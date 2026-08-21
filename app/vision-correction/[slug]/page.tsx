@@ -14,6 +14,21 @@ import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
 import ImagePh from "@/components/ImagePh";
 import { PhText } from "@/components/Ph";
+import VideoSection from "@/components/VideoSection";
+import { videosFor, type PracticeVideo } from "@/content/videos";
+
+const procedureVideoKey: Record<string, PracticeVideo["procedure"]> = {
+  lasik: "LASIK",
+  prk: "PRK",
+  "evo-icl": "EVO ICL",
+};
+
+const kindOrder: Record<PracticeVideo["kind"], number> = {
+  explainer: 0,
+  doctor: 1,
+  welcome: 2,
+  testimonial: 3,
+};
 
 export function generateStaticParams() {
   return procedures.map((p) => ({ slug: p.slug }));
@@ -166,6 +181,15 @@ export default async function ProcedurePage({
           </Reveal>
         </div>
       </Section>
+
+      <VideoSection
+        title="See it for yourself."
+        lede={`Real ${proc.name} videos from our team and our patients, straight from the practice's YouTube channel.`}
+        videos={[...videosFor(procedureVideoKey[proc.slug])]
+          .sort((a, b) => kindOrder[a.kind] - kindOrder[b.kind])
+          .slice(0, 6)}
+        tone="white"
+      />
 
       <Section tone="sand">
         <Reveal>

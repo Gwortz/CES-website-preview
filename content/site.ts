@@ -132,7 +132,7 @@ export type Stat = {
   placeholder: boolean;
 };
 
-/** Authority stat bar: two verified firsts, three bracketed placeholders. */
+/** Authority stat bar. Figures from the practice's published bios and public review listings (Aug 2026). */
 export const stats: Stat[] = [
   {
     value: "First in Kentucky",
@@ -145,19 +145,19 @@ export const stats: Stat[] = [
     placeholder: false,
   },
   {
-    value: "XX,000+",
-    label: "procedures performed",
-    placeholder: true,
+    value: "81,000+",
+    label: "procedures performed by Dr. Ferguson alone",
+    placeholder: false,
   },
   {
-    value: "XXX doctors and their families",
-    label: "have trusted us with their own eyes",
-    placeholder: true,
+    value: "6,155+",
+    label: "verified patient reviews on rater8",
+    placeholder: false,
   },
   {
-    value: "X.X stars · X,XXX Google reviews",
-    label: "across both locations",
-    placeholder: true,
+    value: "4.8 stars",
+    label: "across 865+ Google reviews",
+    placeholder: false,
   },
 ];
 

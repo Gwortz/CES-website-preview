@@ -37,9 +37,10 @@ export default function FinancingPage() {
               title: "Financing partners",
               body: (
                 <>
-                  We work with healthcare financing providers offering monthly
-                  plans, including promotional interest options for qualified
-                  applicants. <Ph>Financing partner names and terms</Ph>
+                  We offer 24-month no-interest financing for qualified
+                  applicants, alongside monthly payment plans through
+                  healthcare financing providers.{" "}
+                  <Ph>Financing partner names and full terms</Ph>
                 </>
               ),
             },

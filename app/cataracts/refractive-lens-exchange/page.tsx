@@ -11,6 +11,8 @@ import {
 import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
 import ImagePh from "@/components/ImagePh";
+import VideoSection from "@/components/VideoSection";
+import { videosFor } from "@/content/videos";
 
 export const metadata: Metadata = {
   title: "Refractive Lens Exchange — End the Reader Shuffle",
@@ -182,6 +184,12 @@ export default function RLEPage() {
           </Reveal>
         </div>
       </Section>
+
+      <VideoSection
+        title="What is RLE? Hear it from our team."
+        videos={videosFor("RLE")}
+        tone="white"
+      />
 
       <Section tone="sand">
         <Reveal>

@@ -57,6 +57,11 @@ export default function ReviewWall() {
                     · {review.location}
                   </span>
                 </p>
+                {review.doctor && (
+                  <p className="mt-0.5 text-sm text-ink/60">
+                    About {review.doctor}
+                  </p>
+                )}
                 {review.source && review.source !== "sample" ? (
                   <p className="mt-3 text-xs font-semibold text-ink/55">
                     Source: {review.source} reviews

@@ -190,7 +190,8 @@ export default async function LocationPage({
             <div className="mt-8">
               <CheckList
                 items={[
-                  "Dedicated ophthalmic surgery center, not a shared hospital OR schedule",
+                  "Central Kentucky's first ophthalmic surgical facility dedicated solely to the surgical care of the eye",
+                  "Accredited by the AAAHC",
                   "LensAR femtosecond laser for laser-assisted cataract surgery",
                   "Advanced diagnostics for lens power selection and wavefront-guided LASIK",
                   "Co-management coordination with referring optometrists statewide",
