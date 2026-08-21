@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+
+  /* Deep forest primary */
+  --color-pine-50: #f2f7f4;
+  --color-pine-100: #e0ede6;
+  --color-pine-200: #c3dbcd;
+  --color-pine-300: #9ac2ac;
+  --color-pine-400: #6ba287;
+  --color-pine-500: #47846a;
+  --color-pine-600: #346a54;
+  --color-pine-700: #2a5645;
+  --color-pine-800: #234639;
+  --color-pine-900: #1c382e;
+  --color-pine-950: #122720;
+
+  /* Warm accent */
+  --color-copper-50: #fbf4ed;
+  --color-copper-100: #f6e7d8;
+  --color-copper-200: #eccfb2;
+  --color-copper-300: #e0b085;
+  --color-copper-400: #d28e58;
+  --color-copper-500: #c17439;
+  --color-copper-600: #a55c2a;
+  --color-copper-700: #854a24;
+  --color-copper-800: #6b3d20;
+  --color-copper-900: #57331d;
+
+  /* Warm neutrals */
+  --color-cream: #faf7f1;
+  --color-sand: #f2ecdf;
+  --color-ink: #20302b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: var(--color-pine-200);
+  color: var(--color-pine-950);
+}
+
+/* Visible focus everywhere — this site serves visually impaired patients */
+:focus-visible {
+  outline: 2px solid var(--color-copper-600);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.on-dark :focus-visible {
+  outline-color: var(--color-copper-300);
+}
+
+/* Skip-to-content link */
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  z-index: 100;
+  transform: translateY(-300%);
+  background: var(--color-pine-950);
+  color: var(--color-cream);
+  padding: 0.625rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: transform 150ms ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+/* Bracketed placeholder content — deliberately obvious, never mistaken for a real figure */
+.ph {
+  color: #92400e; /* amber-800 */
+  background: #fffbeb; /* amber-50 */
+  border: 1px dashed #d97706; /* amber-600 */
+  border-radius: 0.375rem;
+  padding: 0.05em 0.4em;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-style: normal;
+  white-space: normal;
+}
+
+.on-dark .ph {
+  background: rgb(255 251 235 / 0.12);
+  color: #fcd34d; /* amber-300 */
+  border-color: #b45309;
+}
+
+/* Scroll-reveal — only hides content when JS is present, degrades gracefully */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(1.25rem);
+  transition:
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
