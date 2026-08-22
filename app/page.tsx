@@ -10,6 +10,7 @@ import ImagePh from "@/components/ImagePh";
 import DoctorPhoto from "@/components/DoctorPhoto";
 import Stars from "@/components/Stars";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
+import HeroVideo from "@/components/HeroVideo";
 import { getVideo } from "@/content/videos";
 import { differentiators } from "@/content/differentiators";
 import { awards } from "@/content/awards";
@@ -57,22 +58,18 @@ export default function HomePage() {
   return (
     <>
       {/* ---------------- Hero ---------------- */}
-      <section className="on-dark relative overflow-hidden bg-brand-950">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0"
-        >
-          <div className="absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-brand-700/40 blur-3xl" />
-          <div className="absolute -right-24 -top-24 h-[28rem] w-[28rem] rounded-full bg-accent-600/25 blur-3xl" />
-          <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-brand-500/20 blur-3xl" />
-        </div>
-        <div className="relative mx-auto max-w-7xl px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24 lg:px-8">
-          <span className="inline-flex items-center gap-2 rounded-full border border-cream/20 bg-cream/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-cream/80">
+      <section className="on-dark relative flex min-h-[70vh] items-center overflow-hidden bg-brand-950 lg:min-h-[80vh]">
+        <HeroVideo videoId="qzJ0T2KOEIY" />
+        <div className="relative mx-auto w-full max-w-7xl px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24 lg:px-8">
+          <a
+            href="#meet-the-surgeons"
+            className="inline-flex items-center gap-2 rounded-full border border-cream/25 bg-cream/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-cream/85 transition-colors hover:bg-cream/20"
+          >
             <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="currentColor" aria-hidden="true">
               <path d="M9 6.5v11l9-5.5-9-5.5z" />
             </svg>
-            Full-width lifestyle video placeholder
-          </span>
+            Watch our story with sound
+          </a>
           <h1 className="mt-8 max-w-4xl font-display text-4xl font-semibold leading-[1.05] tracking-tight text-cream sm:text-6xl lg:text-7xl">
             Choose the Doctors
             <br />
@@ -343,7 +340,7 @@ export default function HomePage() {
       </Section>
 
       {/* ---------------- Meet the surgeons ---------------- */}
-      <Section>
+      <Section id="meet-the-surgeons">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <Reveal>
             <SectionHeading
