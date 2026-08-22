@@ -10,7 +10,7 @@ import ImagePh from "@/components/ImagePh";
 import DoctorPhoto from "@/components/DoctorPhoto";
 import Stars from "@/components/Stars";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
-import HeroVideo from "@/components/HeroVideo";
+import HeroPlayer from "@/components/HeroPlayer";
 import { getVideo } from "@/content/videos";
 import { differentiators } from "@/content/differentiators";
 import { awards } from "@/content/awards";
@@ -57,30 +57,26 @@ const videoTestimonialIds = [
 export default function HomePage() {
   return (
     <>
-      {/* ---------------- Hero ---------------- */}
-      <section className="on-dark relative flex min-h-[70vh] items-center overflow-hidden bg-brand-950 lg:min-h-[80vh]">
-        <HeroVideo videoId="qzJ0T2KOEIY" />
-        <div className="relative mx-auto w-full max-w-7xl px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24 lg:px-8">
-          <a
-            href="#meet-the-surgeons"
-            className="inline-flex items-center gap-2 rounded-full border border-cream/25 bg-cream/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-cream/85 transition-colors hover:bg-cream/20"
-          >
-            <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="currentColor" aria-hidden="true">
-              <path d="M9 6.5v11l9-5.5-9-5.5z" />
-            </svg>
-            Watch our story with sound
-          </a>
-          <h1 className="mt-8 max-w-4xl font-display text-4xl font-semibold leading-[1.05] tracking-tight text-cream sm:text-6xl lg:text-7xl">
+      {/* ---------------- Hero: featured video, banner below ---------------- */}
+      <section className="on-dark bg-brand-950">
+        <div className="mx-auto w-full max-w-[min(100%,152vh)] px-4 pt-4 sm:px-6 sm:pt-6 lg:px-8">
+          <HeroPlayer
+            videoId="qzJ0T2KOEIY"
+            title="Welcome to Commonwealth Eye Surgery"
+          />
+        </div>
+        <div className="mx-auto max-w-7xl px-4 pb-14 pt-10 text-center sm:px-6 sm:pb-16 sm:pt-12 lg:px-8">
+          <h1 className="mx-auto max-w-4xl font-display text-4xl font-semibold leading-[1.05] tracking-tight text-cream sm:text-5xl lg:text-6xl">
             Choose the Doctors
             <br />
             the Doctors Choose.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-brand-100/85 sm:text-xl">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-brand-100/85 sm:text-xl">
             {site.secondaryTagline} Premier surgical eye care in the Bluegrass,
             from Kentucky&rsquo;s first optometric co-management surgical
             center. Now in Lexington and Louisville.
           </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <CTALink href="/book" variant="accent" size="lg">
               Book a Consultation
             </CTALink>
@@ -346,13 +342,13 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Meet the surgeons"
               title="The doctors the doctors choose."
-              lede="When Kentucky physicians and optometrists need eye surgery for themselves or their families, these are the surgeons they call. Press play for a quick introduction to the practice."
+              lede="When Kentucky physicians and optometrists need eye surgery for themselves or their families, these are the surgeons they call. Press play to hear our surgeons walk through your options in their own words."
             />
           </Reveal>
           <Reveal delay={120}>
             <YouTubeEmbed
-              videoId="qzJ0T2KOEIY"
-              title="Welcome to Commonwealth Eye Surgery"
+              videoId="cdPA4sMHr24"
+              title="Understanding Your Options for Cataract Surgery, with Drs. Ferguson and Wörtz"
             />
           </Reveal>
         </div>
