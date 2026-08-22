@@ -12,6 +12,7 @@ import Stars from "@/components/Stars";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { getVideo } from "@/content/videos";
 import { differentiators } from "@/content/differentiators";
+import { awards } from "@/content/awards";
 
 export const metadata: Metadata = {
   title: `${site.name} — Choose the Doctors the Doctors Choose`,
@@ -294,17 +295,70 @@ export default function HomePage() {
             })}
           </ul>
         </Reveal>
+
+        {/* Awards band */}
+        <Reveal className="mt-14">
+          <div className="rounded-3xl bg-sand p-6 sm:p-8">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+              <h3 className="font-display text-2xl font-semibold text-brand-950">
+                Recognized across Kentucky
+              </h3>
+              <CTALink href="/about" variant="link">
+                More about the practice
+              </CTALink>
+            </div>
+            <ul className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              {awards.map((award) => (
+                <li key={award.name} className="flex gap-3">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="mt-0.5 h-6 w-6 shrink-0 text-accent-600"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="9" r="5.5" />
+                    <path
+                      d="M8.5 13.5L7 21l5-2.5L17 21l-1.5-7.5"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <div>
+                    <p className="text-sm font-bold leading-snug text-brand-950">
+                      {award.name}
+                    </p>
+                    <p className="mt-0.5 text-xs leading-snug text-ink/65">
+                      {award.detail}
+                    </p>
+                    <p className="mt-1 text-xs">
+                      {award.year ?? <Ph>Year</Ph>}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
       </Section>
 
       {/* ---------------- Meet the surgeons ---------------- */}
       <Section>
-        <Reveal>
-          <SectionHeading
-            eyebrow="Meet the surgeons"
-            title="The doctors the doctors choose."
-            lede="When Kentucky physicians and optometrists need eye surgery for themselves or their families, these are the surgeons they call."
-          />
-        </Reveal>
+        <div className="grid items-center gap-10 lg:grid-cols-2">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Meet the surgeons"
+              title="The doctors the doctors choose."
+              lede="When Kentucky physicians and optometrists need eye surgery for themselves or their families, these are the surgeons they call. Press play for a quick introduction to the practice."
+            />
+          </Reveal>
+          <Reveal delay={120}>
+            <YouTubeEmbed
+              videoId="qzJ0T2KOEIY"
+              title="Welcome to Commonwealth Eye Surgery"
+            />
+          </Reveal>
+        </div>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {surgeons.map((doc, i) => (
             <Reveal key={doc.slug} delay={i * 90}>

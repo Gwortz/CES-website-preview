@@ -13,6 +13,7 @@ import ImagePh from "@/components/ImagePh";
 import Ph from "@/components/Ph";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { site } from "@/content/site";
+import { awards } from "@/content/awards";
 
 export const metadata: Metadata = {
   title: "About Us — Why Choose Commonwealth Eye Surgery",
@@ -102,24 +103,7 @@ export default function AboutPage() {
           />
         </Reveal>
         <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            {
-              name: "Best Cataract Surgeons in America",
-              detail: "Drs. Ferguson and Wörtz",
-            },
-            {
-              name: "ABC 36 Viewers' Choice Awards",
-              detail: "Best LASIK and Best Eye Care Practice",
-            },
-            {
-              name: "Best of Lexington",
-              detail: "Best LASIK and Best Eye Care Practice",
-            },
-            {
-              name: "U.S. News High Performing",
-              detail: "Ambulatory surgery center, ophthalmology",
-            },
-          ].map((award, i) => (
+          {awards.map((award, i) => (
             <Reveal key={award.name} delay={i * 60} as="li">
               <div className="flex h-full flex-col items-center rounded-3xl border border-brand-900/10 bg-cream p-6 text-center">
                 <ImagePh
@@ -133,7 +117,7 @@ export default function AboutPage() {
                 </p>
                 <p className="mt-1 text-xs text-ink/60">{award.detail}</p>
                 <p className="mt-2 text-xs">
-                  <Ph>Year</Ph>
+                  {award.year ?? <Ph>Year</Ph>}
                 </p>
               </div>
             </Reveal>
