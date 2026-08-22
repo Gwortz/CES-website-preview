@@ -163,6 +163,7 @@ export const stats: Stat[] = [
 
 export const footerLinks = {
   explore: [
+    { label: "Why Commonwealth", href: "/why-commonwealth" },
     { label: "Start Here — By Age", href: "/start-here" },
     { label: "LASIK & Vision Correction", href: "/vision-correction" },
     { label: "Cataracts & Lens Options", href: "/cataracts" },

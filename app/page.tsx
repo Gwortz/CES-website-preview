@@ -11,6 +11,7 @@ import DoctorPhoto from "@/components/DoctorPhoto";
 import Stars from "@/components/Stars";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { getVideo } from "@/content/videos";
+import { differentiators } from "@/content/differentiators";
 
 export const metadata: Metadata = {
   title: `${site.name} — Choose the Doctors the Doctors Choose`,
@@ -112,6 +113,51 @@ export default function HomePage() {
           </dl>
         </div>
       </section>
+
+      {/* ---------------- Why Commonwealth ---------------- */}
+      <Section tone="white">
+        <Reveal>
+          <SectionHeading
+            eyebrow="Why Commonwealth"
+            title="Four things you cannot buy."
+            lede="Plenty of practices have the same equipment. What separates a surgical outcome is who owns the practice, how long they have been doing this, how close they are to you, and whether they know when the newest tool is the right one."
+          />
+        </Reveal>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          {differentiators.map((d, i) => (
+            <Reveal key={d.slug} delay={i * 90}>
+              <Link
+                href={`/why-commonwealth#${d.slug}`}
+                className="group flex h-full flex-col rounded-3xl border border-brand-900/10 bg-cream p-7 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-900/10"
+              >
+                <div className="flex items-baseline gap-3">
+                  <span className="font-display text-2xl font-semibold text-brand-900/25">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent-700">
+                    {d.label}
+                  </p>
+                </div>
+                <h3 className="mt-3 font-display text-2xl font-semibold text-balance text-brand-950">
+                  {d.headline}
+                </h3>
+                <p className="mt-3 flex-1 leading-relaxed text-ink/75">
+                  {d.summary}
+                </p>
+                <span className="mt-6 inline-flex items-center gap-2 font-semibold text-accent-700 group-hover:text-accent-800">
+                  Read more
+                  <span
+                    aria-hidden="true"
+                    className="transition-transform group-hover:translate-x-1"
+                  >
+                    &rarr;
+                  </span>
+                </span>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
 
       {/* ---------------- Start Here — By Age ---------------- */}
       <Section>
