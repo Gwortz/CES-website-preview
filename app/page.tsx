@@ -11,6 +11,7 @@ import DoctorPhoto from "@/components/DoctorPhoto";
 import Stars from "@/components/Stars";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import HeroPlayer from "@/components/HeroPlayer";
+import { LogoMark } from "@/components/Logo";
 import { getVideo } from "@/content/videos";
 import { differentiators } from "@/content/differentiators";
 import { awards } from "@/content/awards";
@@ -57,15 +58,27 @@ const videoTestimonialIds = [
 export default function HomePage() {
   return (
     <>
-      {/* ---------------- Hero: featured video, banner below ---------------- */}
-      <section className="on-dark bg-brand-950">
-        <div className="mx-auto w-full max-w-[min(100%,152vh)] px-4 pt-4 sm:px-6 sm:pt-6 lg:px-8">
+      {/* ---------------- Hero: the practice film, framed into the page ---------------- */}
+      <section className="on-dark relative overflow-hidden bg-brand-950">
+        {/* Ambient glows in the logo's cyan family */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          <div className="absolute -left-40 top-10 h-[30rem] w-[30rem] rounded-full bg-brand-500/15 blur-3xl" />
+          <div className="absolute -right-32 top-1/3 h-[26rem] w-[26rem] rounded-full bg-accent-400/15 blur-3xl" />
+          <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-brand-400/10 blur-3xl" />
+        </div>
+
+        <div className="relative mx-auto w-full max-w-[min(64rem,140vh)] px-5 pt-8 sm:px-10 sm:pt-10 lg:px-12">
+          <p className="mb-5 flex items-center justify-center gap-3 text-xs font-bold uppercase tracking-[0.25em] text-accent-300 sm:mb-7">
+            <LogoMark className="h-7 w-7 rounded-md" />
+            Welcome to Commonwealth Eye Surgery
+          </p>
           <HeroPlayer
             videoId="qzJ0T2KOEIY"
             title="Welcome to Commonwealth Eye Surgery"
           />
         </div>
-        <div className="mx-auto max-w-7xl px-4 pb-14 pt-10 text-center sm:px-6 sm:pb-16 sm:pt-12 lg:px-8">
+
+        <div className="relative mx-auto max-w-7xl px-4 pb-10 pt-12 text-center sm:px-6 sm:pt-16 lg:px-8">
           <h1 className="mx-auto max-w-4xl font-display text-4xl font-semibold leading-[1.05] tracking-tight text-cream sm:text-5xl lg:text-6xl">
             Choose the Doctors
             <br />
@@ -84,6 +97,20 @@ export default function HomePage() {
               Find Your Path
             </CTALink>
           </div>
+        </div>
+
+        {/* Curved transition into the stat bar */}
+        <div aria-hidden="true" className="relative mt-6 text-sand sm:mt-8">
+          <svg
+            viewBox="0 0 1440 56"
+            preserveAspectRatio="none"
+            className="block h-8 w-full sm:h-14"
+          >
+            <path
+              d="M0 56h1440V28C1180 4 900 0 720 0S260 4 0 28z"
+              fill="currentColor"
+            />
+          </svg>
         </div>
       </section>
 
