@@ -85,9 +85,8 @@ export default function HomePage() {
             the Doctors Choose.
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-brand-100/85 sm:text-xl">
-            {site.secondaryTagline} Premier surgical eye care in the Bluegrass,
-            from Kentucky&rsquo;s first optometric co-management surgical
-            center. Now in Lexington and Louisville.
+            {site.secondaryTagline} Premier surgical eye care in the Bluegrass
+            since 1985. Now in Lexington and Louisville.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <CTALink href="/book" variant="accent" size="lg">
