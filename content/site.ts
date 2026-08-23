@@ -145,8 +145,8 @@ export const stats: Stat[] = [
     placeholder: false,
   },
   {
-    value: "81,000+",
-    label: "procedures performed by Dr. Ferguson alone",
+    value: "150,000+",
+    label: "cataract surgeries by our three surgeons",
     placeholder: false,
   },
   {
