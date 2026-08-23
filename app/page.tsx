@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { site, stats, locations } from "@/content/site";
-import { surgeons } from "@/content/doctors";
+import { surgeons, optometrists } from "@/content/doctors";
 import { reviews } from "@/content/reviews";
 import { CTALink, Section, SectionHeading, Eyebrow } from "@/components/ui";
 import Reveal from "@/components/Reveal";
@@ -379,11 +379,11 @@ export default function HomePage() {
           </Reveal>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {surgeons.map((doc, i) => (
-            <Reveal key={doc.slug} delay={i * 90}>
+          {surgeons.map((doc) => (
+            <div key={doc.slug}>
               <Link
                 href={`/doctors/${doc.slug}`}
-                className="group block rounded-3xl border border-brand-900/10 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-900/10"
+                className="group block h-full rounded-3xl border border-brand-900/10 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-900/10"
               >
                 <DoctorPhoto
                   photo={doc.photo}
@@ -403,14 +403,59 @@ export default function HomePage() {
                   </span>
                 </span>
               </Link>
-            </Reveal>
+            </div>
           ))}
         </div>
-        <Reveal className="mt-8">
-          <CTALink href="/doctors" variant="link">
-            Meet the full team, including our optometrists
-          </CTALink>
-        </Reveal>
+
+        {/* The co-management team, always visible */}
+        <div className="mt-10 rounded-3xl bg-brand-50 p-6 sm:p-8">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent-700">
+                The co-management team
+              </p>
+              <h3 className="mt-2 font-display text-2xl font-semibold text-brand-950">
+                Our optometric physicians
+              </h3>
+            </div>
+            <CTALink href="/doctors" variant="link">
+              Read all doctor bios
+            </CTALink>
+          </div>
+          <div className="mt-6 grid gap-4 sm:grid-cols-3">
+            {optometrists.map((doc) => (
+              <Link
+                key={doc.slug}
+                href={`/doctors/${doc.slug}`}
+                className="group flex items-center gap-4 rounded-2xl border border-brand-900/10 bg-white p-4 transition-all hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <div className="h-20 w-20 shrink-0 overflow-hidden rounded-xl">
+                  <DoctorPhoto
+                    photo={doc.photo}
+                    name={doc.displayName}
+                    className="h-full"
+                    rounded="rounded-none"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold leading-snug text-brand-950">
+                    {doc.name}
+                  </p>
+                  <p className="mt-0.5 text-sm text-ink/65">{doc.role}</p>
+                  <span className="mt-1.5 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-700 group-hover:text-accent-800">
+                    Read bio
+                    <span
+                      aria-hidden="true"
+                      className="transition-transform group-hover:translate-x-1"
+                    >
+                      &rarr;
+                    </span>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
       </Section>
 
       {/* ---------------- Locations ---------------- */}
