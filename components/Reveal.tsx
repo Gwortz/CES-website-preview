@@ -19,19 +19,24 @@ export default function Reveal({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const io = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            el.classList.add("is-visible");
-            io.disconnect();
+    // If the observer is unavailable or fails, content must never stay hidden
+    try {
+      const io = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              el.classList.add("is-visible");
+              io.disconnect();
+            }
           }
-        }
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -32px 0px" }
-    );
-    io.observe(el);
-    return () => io.disconnect();
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -32px 0px" }
+      );
+      io.observe(el);
+      return () => io.disconnect();
+    } catch {
+      el.classList.add("is-visible");
+    }
   }, []);
 
   return (

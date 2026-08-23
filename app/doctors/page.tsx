@@ -24,17 +24,15 @@ function DoctorCard({
   focus,
   role,
   photo,
-  delay,
 }: {
   slug: string;
   name: string;
   focus: string;
   role: string;
   photo?: string;
-  delay: number;
 }) {
   return (
-    <Reveal delay={delay}>
+    <div>
       <Link
         href={`/doctors/${slug}`}
         className="group block h-full rounded-3xl border border-brand-900/10 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-900/10"
@@ -57,7 +55,7 @@ function DoctorCard({
           </span>
         </span>
       </Link>
-    </Reveal>
+    </div>
   );
 }
 
@@ -103,7 +101,6 @@ export default function DoctorsPage() {
               focus={doc.focus}
               role={doc.role}
               photo={doc.photo}
-              delay={i * 90}
             />
           ))}
         </div>
@@ -126,7 +123,6 @@ export default function DoctorsPage() {
               focus={doc.focus}
               role={doc.role}
               photo={doc.photo}
-              delay={i * 90}
             />
           ))}
         </div>
