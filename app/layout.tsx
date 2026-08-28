@@ -20,7 +20,7 @@ const figtree = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://commonwealth-eye-demo.vercel.app"),
+  metadataBase: new URL("https://ces-website-preview.vercel.app"),
   title: {
     default: `${site.name} — Demo Preview`,
     template: `%s · ${site.name}`,
