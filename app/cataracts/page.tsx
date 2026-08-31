@@ -9,6 +9,8 @@ import {
   Card,
 } from "@/components/ui";
 import Reveal from "@/components/Reveal";
+import { imagery } from "@/content/imagery";
+import SiteImage from "@/components/SiteImage";
 import CTASection from "@/components/CTASection";
 import ImagePh from "@/components/ImagePh";
 import VideoSection from "@/components/VideoSection";
@@ -89,9 +91,10 @@ export default function CataractsPage() {
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <ImagePh
-              variant="photo"
-              label="Vision with and without cataract — comparison imagery placeholder"
+            <SiteImage
+              src={imagery.cataractVisionSimulation}
+              alt="Simulated view through a cataract beside the same scene after surgery"
+              label="Vision with and without a cataract"
               className="aspect-[4/3]"
             />
           </Reveal>
@@ -176,9 +179,10 @@ export default function CataractsPage() {
           </Reveal>
           <Reveal delay={120}>
             <div className="space-y-6">
-              <ImagePh
-                variant="photo"
-                label="LensAR femtosecond laser suite — imagery placeholder"
+              <SiteImage
+                src={imagery.surgicalTeam}
+                alt="The Commonwealth Eye Surgery team in the Lexington operating suite"
+                label="Our surgical team"
                 className="aspect-[4/3]"
               />
               <Card>

@@ -11,6 +11,7 @@ import {
   Card,
 } from "@/components/ui";
 import Reveal from "@/components/Reveal";
+import LensDiagram from "@/components/LensDiagram";
 import CTASection from "@/components/CTASection";
 import ImagePh from "@/components/ImagePh";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
@@ -75,11 +76,7 @@ export default async function LensPage({
             {lens.video ? (
               <YouTubeEmbed videoId={lens.video.id} title={lens.video.title} />
             ) : (
-              <ImagePh
-                variant="photo"
-                label={`${lens.shortName} lens — optical diagram placeholder`}
-                className="aspect-[4/3]"
-              />
+              <LensDiagram slug={lens.slug} />
             )}
             <Card className="mt-6">
               <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-accent-700">

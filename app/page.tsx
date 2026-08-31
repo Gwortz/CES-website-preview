@@ -5,6 +5,7 @@ import { surgeons, optometrists } from "@/content/doctors";
 import { reviews } from "@/content/reviews";
 import { CTALink, Section, SectionHeading, Eyebrow } from "@/components/ui";
 import Reveal from "@/components/Reveal";
+import MapEmbed from "@/components/MapEmbed";
 import Ph from "@/components/Ph";
 import ImagePh from "@/components/ImagePh";
 import DoctorPhoto from "@/components/DoctorPhoto";
@@ -279,13 +280,9 @@ export default function HomePage() {
                     </span>
                   </p>
                   <p className="text-sm text-ink/60">{review.procedure}</p>
-                  {review.source && review.source !== "sample" ? (
+                  {review.source && (
                     <p className="mt-3 text-xs font-semibold text-ink/55">
                       Source: {review.source} reviews
-                    </p>
-                  ) : (
-                    <p className="mt-3 text-xs">
-                      <Ph>Sample review — replace with live Google reviews</Ph>
                     </p>
                   )}
                 </figcaption>
@@ -465,9 +462,9 @@ export default function HomePage() {
             <Reveal key={loc.slug} delay={i * 90}>
               <div className="overflow-hidden rounded-3xl border border-brand-900/10 bg-white shadow-sm">
                 <div className="relative">
-                  <ImagePh
-                    variant="map"
-                    label={`Map — ${loc.name} office`}
+                  <MapEmbed
+                    name={`${loc.name} office`}
+                    address={`${loc.address1}, ${loc.cityStateZip}`}
                     className="aspect-[21/9]"
                     rounded="rounded-none"
                   />
@@ -548,10 +545,9 @@ export default function HomePage() {
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <ImagePh
-              variant="video"
-              label="Eye Surgery Today — featured episode placeholder"
-              className="aspect-video"
+            <YouTubeEmbed
+              videoId="cdPA4sMHr24"
+              title="Understanding Your Options for Cataract Surgery"
             />
           </Reveal>
         </div>

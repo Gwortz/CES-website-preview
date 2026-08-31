@@ -8,6 +8,8 @@ import {
   CTALink,
 } from "@/components/ui";
 import Reveal from "@/components/Reveal";
+import { imagery } from "@/content/imagery";
+import SiteImage from "@/components/SiteImage";
 import CTASection from "@/components/CTASection";
 import ImagePh from "@/components/ImagePh";
 
@@ -80,9 +82,10 @@ export default function VisionCorrectionHub() {
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <ImagePh
-              variant="photo"
-              label="Corneal topography map — imagery placeholder"
+            <SiteImage
+              src={imagery.diagnosticTesting}
+              alt="Corneal measurement and diagnostic testing before vision correction"
+              label="Diagnostic imaging"
               className="aspect-[4/3]"
             />
           </Reveal>

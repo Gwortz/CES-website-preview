@@ -10,6 +10,7 @@ import {
   Card,
 } from "@/components/ui";
 import Reveal from "@/components/Reveal";
+import MapEmbed from "@/components/MapEmbed";
 import CTASection from "@/components/CTASection";
 import ImagePh from "@/components/ImagePh";
 import Ph from "@/components/Ph";
@@ -74,9 +75,9 @@ export default async function LocationPage({
       <Section>
         <div className="grid items-start gap-10 lg:grid-cols-[1.2fr_1fr]">
           <Reveal>
-            <ImagePh
-              variant="map"
-              label={`Embedded interactive map — ${loc.name} office`}
+            <MapEmbed
+              name={`${loc.name} office`}
+              address={`${loc.address1}, ${loc.cityStateZip}`}
               className="aspect-[16/10]"
             />
           </Reveal>

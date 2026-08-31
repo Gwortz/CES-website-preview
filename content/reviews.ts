@@ -14,21 +14,21 @@ export type Review = {
   name: string;
   location: string;
   text: string;
-  /** Where the review was published. "sample" reviews are illustrative and clearly labeled in the UI. */
-  source?: "Google" | "rater8" | "Facebook" | "sample";
+  /** Where the review was published. Every review here is a real, published review. */
+  source?: "Google" | "rater8" | "Facebook";
   /** Which doctor the review concerns, when named. */
   doctor?: string;
 };
-
-export const sampleReviewNotice =
-  "Sample review — replace with live Google reviews";
 
 /**
  * Real reviews below were gathered from public review platforms (rater8,
  * Google, Facebook) and from the quotes the practice already publishes on
  * commonwealtheyes.com. Spot-check wording against the live listings before
- * production launch. Reviews marked source: "sample" are illustrative
- * placeholders for procedures where no public quote was found yet.
+ * production launch.
+ *
+ * NOTE: illustrative "sample" reviews were removed before launch. Never add
+ * invented testimonials here — published reviews must be real, attributable,
+ * and traceable to a public listing.
  */
 export const reviews: Review[] = [
   {
@@ -105,39 +105,6 @@ export const reviews: Review[] = [
     location: "Google review",
     source: "Google",
     text: "I would recommend Commonwealth Eye Surgery to anyone. I have never been able to see so well!",
-  },
-  // Procedures with no public quote found yet — clearly labeled samples
-  {
-    id: "s1",
-    procedure: "RLE",
-    name: "S. B.",
-    location: "Louisville, KY",
-    source: "sample",
-    text: "At 52 I was juggling three pairs of glasses. After lens exchange I keep one pair of cheap readers in a drawer and have not touched them in months.",
-  },
-  {
-    id: "s2",
-    procedure: "LAL",
-    name: "D. H.",
-    location: "Richmond, KY",
-    source: "sample",
-    text: "I had LASIK years ago, so my measurements were tricky. The Light Adjustable Lens let us fine-tune my vision after surgery until it was exactly right.",
-  },
-  {
-    id: "s3",
-    procedure: "Trifocal",
-    name: "K. W.",
-    location: "Frankfort, KY",
-    source: "sample",
-    text: "Menus, dashboard, golf ball. All clear, no glasses. There are faint rings around headlights at night but they faded from my attention within weeks.",
-  },
-  {
-    id: "s4",
-    procedure: "EVO ICL",
-    name: "A. P.",
-    location: "Nicholasville, KY",
-    source: "sample",
-    text: "My prescription was too strong for LASIK. The EVO ICL gave me sharper vision than my contacts ever did, and nothing about my eye was reshaped.",
   },
 ];
 

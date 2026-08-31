@@ -11,6 +11,8 @@ import {
   Card,
 } from "@/components/ui";
 import Reveal from "@/components/Reveal";
+import { imagery } from "@/content/imagery";
+import SiteImage from "@/components/SiteImage";
 import CTASection from "@/components/CTASection";
 import ImagePh from "@/components/ImagePh";
 import { PhText } from "@/components/Ph";
@@ -106,9 +108,10 @@ export default async function ProcedurePage({
               <CheckList items={proc.benefits} />
             </div>
             <div className="mt-8">
-              <ImagePh
-                variant="photo"
-                label={`${proc.name} lifestyle imagery placeholder`}
+              <SiteImage
+                src={imagery.lifestyle[proc.slug]}
+                alt={`Life after ${proc.name} at Commonwealth Eye Surgery`}
+                label={`${proc.name} lifestyle imagery`}
                 className="aspect-[4/3]"
               />
             </div>

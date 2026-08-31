@@ -84,14 +84,8 @@ export default async function DoctorPage({
                 name={doc.displayName}
                 className="aspect-[4/5]"
               />
-              {doc.video ? (
+              {doc.video && (
                 <YouTubeEmbed videoId={doc.video.id} title={doc.video.title} />
-              ) : (
-                <ImagePh
-                  variant="video"
-                  label={`Video introduction from ${doc.displayName} — placeholder player`}
-                  className="aspect-video"
-                />
               )}
             </div>
           </div>

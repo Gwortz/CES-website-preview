@@ -62,18 +62,9 @@ export default function ReviewWall() {
                     About {review.doctor}
                   </p>
                 )}
-                {review.source && review.source !== "sample" ? (
+                {review.source && (
                   <p className="mt-3 text-xs font-semibold text-ink/55">
                     Source: {review.source} reviews
-                  </p>
-                ) : (
-                  <p className="mt-3 text-xs">
-                    <span
-                      className="ph"
-                      title="Placeholder — replace with a verified figure"
-                    >
-                      [Sample review — replace with live Google reviews]
-                    </span>
                   </p>
                 )}
               </figcaption>

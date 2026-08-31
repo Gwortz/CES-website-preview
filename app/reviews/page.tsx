@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { PageHero, Section, SectionHeading, CTALink } from "@/components/ui";
 import Reveal from "@/components/Reveal";
+import { imagery } from "@/content/imagery";
+import SiteImage from "@/components/SiteImage";
 import CTASection from "@/components/CTASection";
 import ReviewWall from "@/components/ReviewWall";
 import ImagePh from "@/components/ImagePh";
@@ -56,34 +58,40 @@ export default function ReviewsPage() {
       />
 
       <Section tone="white">
-        <Reveal>
-          <SectionHeading
-            eyebrow="Patient stories"
-            title="Longer stories, told properly."
-            lede="Some outcomes deserve more than a star rating: the night-shift nurse who got her confidence back, the pilot, the grandmother who saw a first birthday clearly. Written patient stories will live here."
-          />
-        </Reveal>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {["A LASIK story", "A cataract story", "An RLE story"].map(
-            (label, i) => (
-              <Reveal key={label} delay={i * 80}>
-                <div className="rounded-3xl border border-brand-900/10 bg-cream p-5">
-                  <ImagePh
-                    variant="photo"
-                    label={`${label} — feature imagery placeholder`}
-                    className="aspect-[16/10]"
-                  />
-                  <h3 className="mt-4 font-display text-xl font-semibold text-brand-950">
-                    <Ph>{label} headline</Ph>
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink/65">
-                    Written patient story placeholder. Real stories, gathered
-                    with patient permission, replace these cards.
-                  </p>
-                </div>
-              </Reveal>
-            )
-          )}
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          <Reveal>
+            <SiteImage
+              src={imagery.reviewsFeature}
+              alt="Patients of Commonwealth Eye Surgery outdoors"
+              label="Patient imagery"
+              className="aspect-[4/3]"
+            />
+          </Reveal>
+          <Reveal delay={100}>
+            <SectionHeading
+              eyebrow="In their own words"
+              title="The reviews say the same thing, over and over."
+            />
+            <figure className="mt-6">
+              <blockquote className="font-display text-2xl leading-relaxed text-balance text-brand-950">
+                &ldquo;Surgery was quick and painless and the results were
+                almost instant. They have a great staff and I would recommend
+                it to anyone considering LASIK.&rdquo;
+              </blockquote>
+              <figcaption className="mt-4 text-sm text-ink/70">
+                <span className="font-semibold text-brand-950">Caitlin</span>
+                <span className="text-ink/55"> · LASIK</span>
+                <span className="mt-1 block text-xs font-semibold text-ink/55">
+                  Source: Facebook reviews
+                </span>
+              </figcaption>
+            </figure>
+            <p className="mt-6 leading-relaxed text-ink/75">
+              Every review on this page is a real, published review from
+              Google, Facebook or rater8 — nothing written for us, and nothing
+              written by us.
+            </p>
+          </Reveal>
         </div>
       </Section>
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { locations } from "@/content/site";
 import { PageHero, Section, CTALink } from "@/components/ui";
 import Reveal from "@/components/Reveal";
+import MapEmbed from "@/components/MapEmbed";
 import CTASection from "@/components/CTASection";
 import ImagePh from "@/components/ImagePh";
 import Ph from "@/components/Ph";
@@ -26,9 +27,9 @@ export default function LocationsPage() {
             <Reveal key={loc.slug} delay={i * 90}>
               <div className="overflow-hidden rounded-3xl border border-brand-900/10 bg-white shadow-sm">
                 <div className="relative">
-                  <ImagePh
-                    variant="map"
-                    label={`Embedded map — ${loc.name} office`}
+                  <MapEmbed
+                    name={`${loc.name} office`}
+                    address={`${loc.address1}, ${loc.cityStateZip}`}
                     className="aspect-[21/10]"
                     rounded="rounded-none"
                   />

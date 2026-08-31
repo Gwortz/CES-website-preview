@@ -9,6 +9,8 @@ import {
   Card,
 } from "@/components/ui";
 import Reveal from "@/components/Reveal";
+import { imagery } from "@/content/imagery";
+import SiteImage from "@/components/SiteImage";
 import CTASection from "@/components/CTASection";
 import ImagePh from "@/components/ImagePh";
 import VideoSection from "@/components/VideoSection";
@@ -82,9 +84,10 @@ export default function RLEPage() {
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <ImagePh
-              variant="photo"
-              label="Life without the reader shuffle — lifestyle imagery placeholder"
+            <SiteImage
+              src={imagery.rleLifestyle}
+              alt="An active couple cycling outdoors without reading glasses"
+              label="Life without the reader shuffle"
               className="aspect-[4/3]"
             />
             <Card className="mt-6">

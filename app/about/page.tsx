@@ -8,6 +8,7 @@ import {
   Card,
 } from "@/components/ui";
 import Reveal from "@/components/Reveal";
+import SiteImage from "@/components/SiteImage";
 import CTASection from "@/components/CTASection";
 import ImagePh from "@/components/ImagePh";
 import Ph from "@/components/Ph";
@@ -99,19 +100,23 @@ export default function AboutPage() {
           <SectionHeading
             eyebrow="Recognition"
             title="Awards and honors."
-            lede="Real recognitions from public sources. Years in amber still need confirmation, and official badge artwork replaces the placeholder medallions."
+            lede="Real recognitions from public sources, shown with the official badge artwork. Any year still in amber needs confirmation from the practice."
           />
         </Reveal>
         <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {awards.map((award, i) => (
             <Reveal key={award.name} delay={i * 60} as="li">
               <div className="flex h-full flex-col items-center rounded-3xl border border-brand-900/10 bg-cream p-6 text-center">
-                <ImagePh
-                  variant="badge"
-                  label="Official award badge artwork placeholder"
-                  className="aspect-square w-24"
-                  rounded="rounded-full"
-                />
+                <div className="flex h-24 w-24 items-center justify-center overflow-hidden rounded-2xl border border-brand-900/10 bg-white p-2">
+                  <SiteImage
+                    src={award.badge}
+                    alt={`${award.name} award badge`}
+                    label="Award badge"
+                    variant="badge"
+                    className="h-full w-full !border-0 object-contain"
+                    rounded="rounded-none"
+                  />
+                </div>
                 <p className="mt-4 text-sm font-semibold text-brand-950">
                   {award.name}
                 </p>

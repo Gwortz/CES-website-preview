@@ -1,6 +1,8 @@
 /**
- * Local gradient/SVG image placeholder — no external images anywhere in the demo.
- * Clearly labeled so partners can see exactly where real photography goes.
+ * Local gradient/SVG fallback, used only where a real asset is still missing.
+ * Every page now renders the practice's own photography, diagrams, maps and
+ * video; this renders solely as SiteImage/DoctorPhoto's fallback so a missing
+ * file degrades to a labeled block instead of a broken image.
  */
 
 type Variant = "photo" | "portrait" | "video" | "map" | "badge";
